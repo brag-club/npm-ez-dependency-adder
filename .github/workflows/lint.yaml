@@ -1,0 +1,26 @@
+name: Build Checks for Dashboard
+
+on:
+    push:
+    pull_request:
+    workflow_dispatch:
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+
+            - name: Setup Node
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 16
+            - name: Install Yarn
+              run: npm install -g yarn
+            - name: Install Dependencies
+              run: yarn install --frozen-lockfile
+            - name: Lint
+              run: yarn lint
+            - name: Build
+              run: yarn build

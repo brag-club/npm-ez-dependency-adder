@@ -26,9 +26,10 @@ const userNavigation = [
 
 const Navbar = () => {
     return (
-
-        <Disclosure as="nav"
-                    className=" bg-primary lg:border-none">
+        <Disclosure
+            as="nav"
+            className=" bg-primary lg:border-none"
+        >
             {({open}) => (
                 <>
                     <div className="mx-auto max-w-7xl px-2 sm:px-4 lg:px-8">
@@ -126,7 +127,6 @@ const Navbar = () => {
                             </div>
                         </div>
                     </div>
-
                     <Disclosure.Panel className="lg:hidden">
                         <div className="space-y-1 px-2 pb-3 pt-2">
                             {navigation.map((item) => (

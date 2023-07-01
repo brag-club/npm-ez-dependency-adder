@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "next dev",
+    "format": "prettier --write .",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "start": "next start"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.15",
@@ -31,5 +33,12 @@
     "tailwindcss": "3.3.2",
     "typescript": "5.1.6",
     "zod": "^3.21.4"
-  }
+  },
+  "devDependencies": {
+    "@bravo68web/eslint-config": "^1.1.2",
+    "@bravo68web/prettier-config": "^1.1.2",
+    "@bravo68web/tsconfig": "^1.1.2",
+    "prettier": "^2.8.8"
+  },
+  "prettier": "@bravo68web/prettier-config"
 }
