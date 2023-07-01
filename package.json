@@ -1,32 +1,41 @@
 {
-  "name": "next13-tailwind-template",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@hookform/resolvers": "^3.1.1",
-    "@types/node": "20.3.3",
-    "@types/react": "18.2.14",
-    "@types/react-dom": "18.2.6",
-    "autoprefixer": "10.4.14",
-    "class-variance-authority": "^0.6.1",
-    "clsx": "^1.2.1",
-    "eslint": "8.44.0",
-    "eslint-config-next": "13.4.7",
-    "next": "13.4.7",
-    "postcss": "8.4.24",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-hook-form": "^7.45.1",
-    "react-hot-toast": "^2.4.1",
-    "tailwind-merge": "^1.13.2",
-    "tailwindcss": "3.3.2",
-    "typescript": "5.1.6",
-    "zod": "^3.21.4"
-  }
+    "private": true,
+    "name": "next13-tailwind-template",
+    "version": "0.1.0",
+    "scripts": {
+        "build": "next build",
+        "dev": "next dev",
+        "format": "prettier --write .",
+        "lint": "next lint",
+        "lint:fix": "next lint --fix",
+        "start": "next start"
+    },
+    "dependencies": {
+        "@hookform/resolvers": "^3.1.1",
+        "@types/node": "20.3.3",
+        "@types/react": "18.2.14",
+        "@types/react-dom": "18.2.6",
+        "autoprefixer": "10.4.14",
+        "class-variance-authority": "^0.6.1",
+        "clsx": "^1.2.1",
+        "eslint": "8.44.0",
+        "eslint-config-next": "13.4.7",
+        "next": "13.4.7",
+        "postcss": "8.4.24",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "react-hook-form": "^7.45.1",
+        "react-hot-toast": "^2.4.1",
+        "tailwind-merge": "^1.13.2",
+        "tailwindcss": "3.3.2",
+        "typescript": "5.1.6",
+        "zod": "^3.21.4"
+    },
+    "devDependencies": {
+        "@bravo68web/eslint-config": "^1.1.2",
+        "@bravo68web/prettier-config": "^1.1.2",
+        "@bravo68web/tsconfig": "^1.1.2",
+        "prettier": "^2.8.8"
+    },
+    "prettier": "@bravo68web/prettier-config"
 }
