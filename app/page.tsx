@@ -91,7 +91,7 @@ export default function Home() {
                                                 return (
                                                     <div
                                                         key={keyword}
-                                                        className="tag rounded-lg bg-gray-300 bg-opacity-70 p-2 text-sm"
+                                                        className="tag rounded-lg bg-gray-300/70 p-2 text-sm"
                                                     >
                                                         {keyword}
                                                     </div>
