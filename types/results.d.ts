@@ -1,5 +1,5 @@
 interface ISearchResult {
-    keywords: string[]|null;
+    keywords: string[] | null;
     name: string;
     description: string;
     modified: string;

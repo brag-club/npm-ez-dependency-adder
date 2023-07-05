@@ -1,10 +1,12 @@
 "use client";
 
-import Button from "@/components/ui/Button";
+import { useState } from "react";
+
 import { ClipboardDocumentIcon } from "@heroicons/react/24/outline";
 import axios from "axios";
-import { useRef, useState } from "react";
 import { toast } from "react-hot-toast";
+
+import Button from "@/components/ui/Button";
 
 function useDebounce(callback: (t: string) => Promise<void> | void) {
     let timeout: null | NodeJS.Timeout = null;
@@ -14,7 +16,7 @@ function useDebounce(callback: (t: string) => Promise<void> | void) {
             clearTimeout(timeout);
             timeout = null;
         }
-        let t = setTimeout(() => {
+        const t = setTimeout(() => {
             callback(txt);
             timeout = null;
         }, 1000);
@@ -129,7 +131,11 @@ export default function Home() {
                         <div className="dependencies flex w-full flex-wrap gap-3 ">
                             {dependencies.map(dependency => {
                                 return (
-                                    <Button variant={"secondary"} className="dependency text-xs">
+                                    <Button
+                                        key={dependency}
+                                        variant={"secondary"}
+                                        className="dependency text-xs"
+                                    >
                                         {dependency}
                                     </Button>
                                 );
@@ -144,7 +150,11 @@ export default function Home() {
                         <div className="dependencies flex w-full flex-wrap gap-3 ">
                             {devDependencies.map(dependency => {
                                 return (
-                                    <Button variant={"secondary"} className="dependency text-xs">
+                                    <Button
+                                        key={dependency}
+                                        variant={"secondary"}
+                                        className="dependency text-xs"
+                                    >
                                         {dependency}
                                     </Button>
                                 );

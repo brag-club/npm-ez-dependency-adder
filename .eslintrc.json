@@ -2,6 +2,7 @@
     "$schema": "https://json.schemastore.org/eslintrc",
     "extends": ["next/core-web-vitals", "@bravo68web/eslint-config/code-style"],
     "rules": {
-        "react/button-has-type": "off"
+        "react/button-has-type": "off",
+        "tailwindcss/no-custom-classname": "off"
     }
 }
