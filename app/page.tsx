@@ -1,7 +1,7 @@
 "use client";
 
 import Button from "@/components/ui/Button";
-import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import { ClipboardDocumentIcon } from "@heroicons/react/24/outline";
 import axios from "axios";
 import { useRef, useState } from "react";
 import { toast } from "react-hot-toast";
@@ -60,7 +60,7 @@ export default function Home() {
 
     return (
         <main className="mx-auto flex h-screen justify-center px-40 py-10">
-            <div className="flex w-3/5 flex-col px-4">
+            <div className="flex w-1/2 flex-col px-4">
                 <div className="input flex w-full text-gray-700">
                     <input
                         type="text"
@@ -122,7 +122,7 @@ export default function Home() {
                 )}
             </div>
 
-            <div className="flex w-2/5 flex-col px-4">
+            <div className="flex w-1/2 flex-col px-4">
                 {dependencies.length > 0 && (
                     <>
                         <p className="mb-2 text-lg font-semibold">Dependencies: </p>
@@ -153,6 +153,65 @@ export default function Home() {
                         </div>
                     </>
                 )}
+                <div className="commands-section mt-auto flex w-full flex-col gap-5">
+                    <div className="selector">
+                        <label
+                            htmlFor="location"
+                            className="block text-sm font-medium leading-6 text-gray-900"
+                        >
+                            Package Manager
+                        </label>
+                        <select
+                            id="location"
+                            name="location"
+                            className="mt-2 block w-full rounded-md border-0 py-1.5 pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-primary sm:text-sm sm:leading-6"
+                            defaultValue="yarn"
+                        >
+                            <option value={"yarn"}>Yarn</option>
+                            <option value={"npm"}>Npm</option>
+                            <option value={"pnpm"}>Pnpm</option>
+                        </select>
+                    </div>
+                    <div className="command">
+                        <p className="mb-3 font-medium">Only Dependencies</p>
+                        <div className="flex w-full items-center overflow-hidden rounded-lg border border-primary shadow">
+                            <code className="h-full w-full overflow-x-auto bg-gray-50 px-4 py-2">
+                                <p className="w-max pr-4">
+                                    Yarn add reactjs asdf asd afsd fas dfas dfas dfad fas ds
+                                </p>
+                            </code>
+                            <Button className="rounded-none">
+                                <ClipboardDocumentIcon className="h-6 w-6" />
+                            </Button>
+                        </div>
+                    </div>
+                    <div className="command">
+                        <p className="mb-3 font-medium">Only Dev Dependencies</p>
+                        <div className="flex w-full items-center overflow-hidden rounded-lg border border-primary shadow">
+                            <code className="h-full w-full overflow-x-auto bg-gray-50 px-4 py-2">
+                                <p className="w-max pr-4">
+                                    Yarn add reactjs asdf asd afsd fas dfas dfas dfad fas ds
+                                </p>
+                            </code>
+                            <Button className="rounded-none">
+                                <ClipboardDocumentIcon className="h-6 w-6" />
+                            </Button>
+                        </div>
+                    </div>
+                    <div className="command">
+                        <p className="mb-3 font-medium">Both</p>
+                        <div className="flex w-full items-center overflow-hidden rounded-lg border border-primary shadow">
+                            <code className="h-full w-full overflow-x-auto bg-gray-50 px-4 py-2">
+                                <p className="w-max pr-4">
+                                    Yarn add reactjs asdf asd afsd fas dfas dfas dfad fas ds
+                                </p>
+                            </code>
+                            <Button className="rounded-none">
+                                <ClipboardDocumentIcon className="h-6 w-6" />
+                            </Button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
     );
