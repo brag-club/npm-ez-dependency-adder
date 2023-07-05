@@ -1,8 +1,8 @@
-import { Inter } from "next/font/google";
+import { Roboto_Mono } from "next/font/google";
 
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto_Mono({subsets:["latin"]});
 
 export const metadata = {
     title: "Nextjs 13, TailwindCss Template",
@@ -16,7 +16,7 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
     return (
         <html lang="en">
-            <body className={`${inter.className} text-text`}>{children}</body>
+            <body className={`${roboto.className} text-text bg-background`}>{children}</body>
         </html>
     );
 }

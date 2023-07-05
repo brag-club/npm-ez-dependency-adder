@@ -9,7 +9,7 @@ const buttonVariants = cva("px-4 py-2", {
             secondary: "rounded bg-secondary",
         },
         size: {
-            default: "w-min",
+            default: "w-max",
             full: "w-full",
         },
         animation: {
