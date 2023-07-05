@@ -17,7 +17,7 @@ function useDebounce(callback: (t: string) => Promise<void> | void) {
         let t = setTimeout(() => {
             callback(txt);
             timeout = null;
-        }, 500);
+        }, 1000);
         timeout = t;
     };
 }
