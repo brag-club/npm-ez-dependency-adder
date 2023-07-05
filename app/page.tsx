@@ -23,8 +23,10 @@ function useDebounce(callback: (t: string) => Promise<void> | void) {
 }
 
 export default function Home() {
-    const [searched,setSearched] = useState("")
+    const [searched, setSearched] = useState("");
     const [results, setResults] = useState<ISearchResult[]>([]);
+    const [dependencies, setDependencies] = useState<string[]>([]);
+    const [devDependencies, setDevDependencies] = useState<string[]>([]);
     const search = useDebounce(async (input: string) => {
         try {
             if (input === "") {
@@ -38,11 +40,23 @@ export default function Home() {
             const data = res.data?.list as ISearchResult[] | null;
             if (!data) return setResults([]);
             setResults(data);
-            setSearched(input)
+            setSearched(input);
         } catch {
             toast.error("Error Searching for packages");
         }
     });
+
+    const addDependency = (dependency: string) => {
+        return () => {
+            setDependencies(old => [...old, dependency]);
+        };
+    };
+
+    const addDevDependency = (dependency: string) => {
+        return () => {
+            setDevDependencies(old => [...old, dependency]);
+        };
+    };
 
     return (
         <main className="mx-auto flex h-screen max-w-4xl flex-col justify-center px-4 py-10">
@@ -56,9 +70,7 @@ export default function Home() {
             </div>
             {results.length > 0 && (
                 <>
-                    <h2 className="my-10 mt-20 text-4xl font-semibold ">
-                        Search results: {searched}
-                    </h2>
+                    <h2 className="my-10 text-4xl font-semibold ">Search results: {searched}</h2>
                     <div className="results h-full w-full overflow-y-auto">
                         {results.map(result => {
                             return (
@@ -86,12 +98,52 @@ export default function Home() {
                                         <p className="date">Published 2 months ago</p>
                                     </div>
                                     <div className="buttons mt-4 flex gap-3">
-                                        <Button className="">Add</Button>
-                                        <Button>Add as dev</Button>
+                                        <Button
+                                            onClick={addDependency(result.name)}
+                                            disabled={dependencies.includes(result.name)}
+                                        >
+                                            Add
+                                        </Button>
+                                        <Button
+                                            onClick={addDevDependency(result.name)}
+                                            disabled={devDependencies.includes(result.name)}
+                                        >
+                                            Add as dev
+                                        </Button>
                                     </div>
                                 </div>
                             );
                         })}
+                    </div>
+                </>
+            )}
+            {dependencies.length > 0 && (
+                <>
+                    <p className="mb-2 mt-4">Dependencies: </p>
+                    <div className="dependencies flex w-full flex-wrap gap-3 ">
+                        {dependencies.map(dependency => {
+                            return (
+                                <Button variant={"secondary"} className="dependency text-xs">
+                                    {dependency}
+                                </Button>
+                            );
+                        })}
+                        <Button className="dependency text-xs">{"Copy Command"}</Button>
+                    </div>
+                </>
+            )}
+            {devDependencies.length > 0 && (
+                <>
+                    <p className="mb-2 mt-4">Dev Dependencies: </p>
+                    <div className="dependencies flex w-full flex-wrap gap-3 ">
+                        {devDependencies.map(dependency => {
+                            return (
+                                <Button variant={"secondary"} className="dependency text-xs">
+                                    {dependency}
+                                </Button>
+                            );
+                        })}
+                        <Button className="dependency text-xs">{"Copy Command"}</Button>
                     </div>
                 </>
             )}
