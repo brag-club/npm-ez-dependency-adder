@@ -59,7 +59,7 @@ export default function Home() {
     };
 
     return (
-        <main className="mx-auto flex h-screen justify-center px-40 py-10">
+        <main className="mx-auto flex h-screen justify-center px-28 py-10">
             <div className="flex w-1/2 flex-col px-4">
                 <div className="input flex w-full text-gray-700">
                     <input
