@@ -3,20 +3,14 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 
-import {
-    ArrowUpRightIcon,
-    ClipboardDocumentIcon,
-    ShareIcon,
-    TrashIcon,
-    XMarkIcon,
-} from "@heroicons/react/24/outline";
+import { ClipboardDocumentIcon, ShareIcon, TrashIcon } from "@heroicons/react/24/outline";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 
+import DependenciesList from "@/components/DependenciesList";
+import Results from "@/components/Results";
 import SearchBar from "@/components/SearchBar";
 import Button from "@/components/ui/Button";
-import Results from "@/components/Results";
-import DependenciesList from "@/components/DependenciesList";
 
 function useDebounce(callback: (t: string) => Promise<void> | void) {
     let timeout: null | NodeJS.Timeout = null;

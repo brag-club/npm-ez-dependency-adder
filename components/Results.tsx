@@ -1,6 +1,8 @@
 import React from "react";
-import Button from "./ui/Button";
+
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
+
+import Button from "./ui/Button";
 
 interface ResultsInterface {
     results: ISearchResults;
