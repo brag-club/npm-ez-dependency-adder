@@ -25,7 +25,7 @@ function useDebounce(callback: (t: string) => Promise<void> | void) {
 }
 
 function handleLastUpdated(date: Date, currentDate: Date) {
-    const now = new Date();
+    const now = currentDate;
     const diff = now.getTime() - date.getTime();
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
     const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -138,7 +138,7 @@ export default function Home() {
                         className="h-min w-full rounded-lg border-none px-6 py-4 text-xl shadow-black outline-none focus:border-none focus:shadow focus:outline-none focus:ring-0"
                     />
                 </div>
-                {results == null && (
+                {(results == null || undefined) && (
                     <div className="flex h-full w-full flex-col items-center justify-center">
                         <img
                             src="/noresult.jpg"
@@ -148,7 +148,7 @@ export default function Home() {
                         <p className="mt-4 text-xl text-gray-500">Noting to show</p>
                     </div>
                 )}
-                {results?.objects.length! > 0 && (
+                {results && results.objects.length > 0 && (
                     <>
                         <h2 className="my-10 text-4xl font-semibold ">
                             Search results: {searched}
@@ -156,7 +156,10 @@ export default function Home() {
                         <div className="results h-full w-full overflow-y-auto">
                             {results?.objects.map(result => {
                                 return (
-                                    <div key={result.package.name} className="result border-b-2 py-5">
+                                    <div
+                                        key={result.package.name}
+                                        className="result border-b-2 py-5"
+                                    >
                                         <h2 className="text-2xl font-semibold tracking-wider">
                                             {result.package.name}
                                             <a
@@ -169,7 +172,9 @@ export default function Home() {
                                             </a>
                                         </h2>
                                         <p className="pt-2 text-sm text-gray-800">
-                                            {result.package.description ? result.package.description : "No description available"}
+                                            {result.package.description
+                                                ? result.package.description
+                                                : "No description available"}
                                         </p>
                                         <div className="tags my-6 flex w-full flex-wrap gap-3">
                                             {result.package.keywords?.map(keyword => {
@@ -184,22 +189,30 @@ export default function Home() {
                                             })}
                                         </div>
                                         <div className="info flex items-center gap-2 text-xs text-gray-500">
-                                            <p className="version">{result.package.version}</p> {"•"}
+                                            <p className="version">{result.package.version}</p>{" "}
+                                            {"•"}
                                             <p className="date">
                                                 Last Updated :-{" "}
-                                                {handleLastUpdated(new Date(result.package.date), results.time)}
+                                                {handleLastUpdated(
+                                                    new Date(result.package.date),
+                                                    results.time,
+                                                )}
                                             </p>
                                         </div>
                                         <div className="buttons mt-4 flex gap-3">
                                             <Button
                                                 onClick={addDependency(result.package.name)}
-                                                disabled={dependencies.includes(result.package.name)}
+                                                disabled={dependencies.includes(
+                                                    result.package.name,
+                                                )}
                                             >
                                                 Add
                                             </Button>
                                             <Button
                                                 onClick={addDevDependency(result.package.name)}
-                                                disabled={devDependencies.includes(result.package.name)}
+                                                disabled={devDependencies.includes(
+                                                    result.package.name,
+                                                )}
                                             >
                                                 Add as dev
                                             </Button>

@@ -1,1 +1,1 @@
-type PackageManagers = 'npm install' | 'yarn add' | 'pnpm add';
+type PackageManagers = "npm install" | "yarn add" | "pnpm add";

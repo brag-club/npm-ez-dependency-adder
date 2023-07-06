@@ -3,6 +3,7 @@
     "extends": ["next/core-web-vitals", "@bravo68web/eslint-config/code-style"],
     "rules": {
         "react/button-has-type": "off",
-        "tailwindcss/no-custom-classname": "off"
+        "tailwindcss/no-custom-classname": "off",
+        "unicorn/prefer-logical-operator-over-ternary": "off"
     }
 }
