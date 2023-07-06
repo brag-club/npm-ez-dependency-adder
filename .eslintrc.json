@@ -4,6 +4,7 @@
     "rules": {
         "react/button-has-type": "off",
         "tailwindcss/no-custom-classname": "off",
-        "unicorn/prefer-logical-operator-over-ternary": "off"
+        "unicorn/prefer-logical-operator-over-ternary": "off",
+        "@next/next/no-img-element": "off"
     }
 }
