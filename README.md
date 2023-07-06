@@ -1,5 +1,8 @@
-## npm-ez-dependency-adder
+<h1 align="center"> npm-ez-dependency-adder </h1>
 
+<p align="center">
+    <img src="./public/logo.svg" />
+</p>
 
 ## 📝 Description
 
