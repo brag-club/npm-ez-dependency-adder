@@ -72,7 +72,7 @@ export default function Home() {
     const preFetch = searchParams.get("pre") ?? "";
 
     useEffect(() => {
-        if (preContentRead) return;
+        if (preContentRead || !preFetch) return;
         const depData = Buffer.from(preFetch, "base64").toString("utf8");
         const [deps, devDeps] = JSON.parse(depData);
         setDependencies(deps);
