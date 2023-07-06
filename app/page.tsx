@@ -1,10 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 
 import {
     ArrowUpRightIcon,
     ClipboardDocumentIcon,
+    ShareIcon,
     TrashIcon,
     XMarkIcon,
 } from "@heroicons/react/24/outline";
@@ -62,6 +64,21 @@ export default function Home() {
     const [devDependencies, setDevDependencies] = useState<string[]>([]);
 
     const [prefPMInstallCmd, setPrefPMInstallCmd] = useState<PackageManagers>("yarn add");
+    const [preContentRead, setPreContentRead] = useState<boolean>(false);
+
+    const searchParams = useSearchParams();
+
+    const preFetch = searchParams.get("pre") ?? "";
+
+    useEffect(() => {
+        // This will run only once
+        if (preContentRead) return;
+        const depData = Buffer.from(preFetch, "base64").toString("utf8");
+        const [deps, devDeps] = JSON.parse(depData);
+        setDependencies(deps);
+        setDevDependencies(devDeps);
+        setPreContentRead(true);
+    }, [preContentRead, preFetch]);
 
     const search = useDebounce(async (input: string) => {
         try {
@@ -126,6 +143,16 @@ export default function Home() {
             case "reset": {
                 setDependencies([]);
                 setDevDependencies([]);
+
+                break;
+            }
+
+            case "share": {
+                const depData = JSON.stringify([dependencies, devDependencies]);
+                const preFetch = Buffer.from(depData).toString("base64");
+                const url = new URL(window.location.href);
+                url.searchParams.set("pre", preFetch);
+                navigator.clipboard.writeText(url.toString());
 
                 break;
             }
@@ -360,7 +387,7 @@ export default function Home() {
                             </Button>
                         </div>
                     </div>
-                    <div className="command justify-center">
+                    <div className="command flex justify-center gap-2 px-1">
                         <Button
                             className="rounded-none"
                             onClick={buttomInteraction}
@@ -369,6 +396,16 @@ export default function Home() {
                             <div className="flex items-center justify-center">
                                 <TrashIcon className="h-6 w-6" />
                                 <p className="ml-2">Reset</p>
+                            </div>
+                        </Button>
+                        <Button
+                            className="rounded-none"
+                            onClick={buttomInteraction}
+                            value={"share"}
+                        >
+                            <div className="flex items-center justify-center">
+                                <ShareIcon className="h-6 w-6" />
+                                <p className="ml-2">Share</p>
                             </div>
                         </Button>
                     </div>
