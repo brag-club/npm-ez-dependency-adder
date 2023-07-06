@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import { ClipboardDocumentIcon, TrashIcon, ArrowUpRightIcon } from "@heroicons/react/24/outline";
+import { ArrowUpRightIcon, ClipboardDocumentIcon, TrashIcon } from "@heroicons/react/24/outline";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 
@@ -159,10 +159,14 @@ export default function Home() {
                                     <div key={result.name} className="result border-b-2 py-5">
                                         <h2 className="text-2xl font-semibold tracking-wider">
                                             {result.name}
-                                            <a href={"https://npmjs.com/package/"+result.name} className="text-blue-500" target="_blank">
-                                                <ArrowUpRightIcon className="h-4 w-4 inline-block" />
+                                            <a
+                                                href={"https://npmjs.com/package/" + result.name}
+                                                className="text-blue-500"
+                                                target="_blank"
+                                                rel="noreferrer"
+                                            >
+                                                <ArrowUpRightIcon className="inline-block h-4 w-4" />
                                             </a>
-                                            
                                         </h2>
                                         <p className="pt-2 text-sm text-gray-800">
                                             {result.description}
@@ -181,7 +185,10 @@ export default function Home() {
                                         </div>
                                         <div className="info flex items-center gap-2 text-xs text-gray-500">
                                             <p className="version">{result.version}</p> {"•"}
-                                            <p className="date">Last Updated :- {handleLastUpdated(new Date(result.modified))}</p>
+                                            <p className="date">
+                                                Last Updated :-{" "}
+                                                {handleLastUpdated(new Date(result.modified))}
+                                            </p>
                                         </div>
                                         <div className="buttons mt-4 flex gap-3">
                                             <Button
