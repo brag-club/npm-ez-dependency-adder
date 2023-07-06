@@ -71,15 +71,6 @@ export default function Home() {
 
     const preFetch = searchParams.get("pre") ?? "";
 
-    useEffect(() => {
-        if (preContentRead || !preFetch) return;
-        const depData = Buffer.from(preFetch, "base64").toString("utf8");
-        const [deps, devDeps] = JSON.parse(depData);
-        setDependencies(deps);
-        setDevDependencies(devDeps);
-        setPreContentRead(true);
-    }, [preContentRead, preFetch]);
-
     const search = useDebounce(async (input: string) => {
         try {
             if (input === "") {
@@ -170,6 +161,15 @@ export default function Home() {
             setDevDependencies(old => old.filter(dep => dep !== dependency));
         };
     };
+
+    useEffect(() => {
+        if (preContentRead || !preFetch) return;
+        const depData = Buffer.from(preFetch, "base64").toString("utf8");
+        const [deps, devDeps] = JSON.parse(depData);
+        setDependencies(deps);
+        setDevDependencies(devDeps);
+        setPreContentRead(true);
+    }, [preContentRead, preFetch]);
 
     return (
         <main className="mx-auto flex h-screen justify-center px-28 py-10">
@@ -297,7 +297,6 @@ export default function Home() {
                                     </Button>
                                 );
                             })}
-                            {/* <Button className="dependency text-xs">{"Copy Command"}</Button> */}
                         </div>
                     </>
                 )}
