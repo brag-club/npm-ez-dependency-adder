@@ -11,6 +11,7 @@ import DependenciesList from "@/components/DependenciesList";
 import Results from "@/components/Results";
 import SearchBar from "@/components/SearchBar";
 import Button from "@/components/ui/Button";
+import Contributors from "@/components/Contributors";
 
 function useDebounce(callback: (t: string) => Promise<void> | void) {
     let timeout: null | NodeJS.Timeout = null;
@@ -284,29 +285,7 @@ export default function Home() {
                             </div>
                         </Button>
                     </div>
-                    <div className="mt-10 flex w-full justify-center">
-                        <p className="text-sm text-gray-500">
-                            Made with ❤️ by
-                            <a href="https://github.com/chirag3003" className="text-blue-500">
-                                {" "}
-                                Chirag Bhalotia{" "}
-                            </a>
-                            and
-                            <a href="https://github.com/bravo68web" className="text-blue-500">
-                                {" "}
-                                Jyotirmoy Bandopadhayaya
-                            </a>
-                            . ⭐ Star this repo on
-                            <a
-                                href="https://github.com/chirag3003/npm-ez-dependency-adder"
-                                className="text-blue-500"
-                            >
-                                {" "}
-                                Github
-                            </a>
-                            .
-                        </p>
-                    </div>
+                    <Contributors />
                 </div>
             </div>
         </main>
