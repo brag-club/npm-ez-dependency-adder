@@ -1,0 +1,19 @@
+{
+    "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+    "background_color": "#ffffff",
+    "categories": ["development", "utilities", "development tools", "productivity"],
+    "description": "A simple tool to install dependencies and devDependencies to your project with ease. Easily search for packages and install them with a simplified command.",
+    "display": "browser",
+    "icons": [
+        {
+            "sizes": "any",
+            "src": "/logo.svg"
+        }
+    ],
+    "id": "npm-easy-dependency-adder",
+    "lang": "en",
+    "name": "NPM Easy Dependency Adder",
+    "short_name": "NPM Easy Dependency Adder",
+    "start_url": "/",
+    "theme_color": "#ffffff"
+}

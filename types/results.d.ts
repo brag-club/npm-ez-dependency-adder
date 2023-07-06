@@ -8,6 +8,7 @@ interface ISearchPackagesResult {
         date: Date;
         links: {
             npm: string;
+            // TODO: Show Repository URL as Button in package card
             homepage?: string;
             repository?: string;
             issues?: string;
@@ -18,6 +19,7 @@ interface ISearchPackagesResult {
             email?: string;
             url?: string;
         };
+        // TODO: Show Publisher Username in package card as @username
         publisher?: {
             username: string;
             email?: string;
@@ -46,6 +48,8 @@ interface ISearchPackagesResult {
 
 interface ISearchResults {
     objects: ISearchPackagesResult[] | [];
+    // TODO: If there are no results, show a message, "No results found"
+    // TODO: If there are more than 50 results, tell the user to refine their search query
     total: number;
     time: string;
 }
