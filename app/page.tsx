@@ -132,6 +132,18 @@ export default function Home() {
         }
     };
 
+    const removeDependency = (dependency: string) => {
+        return () => {
+            setDependencies(old => old.filter(dep => dep !== dependency));
+        };
+    };
+
+    const removeDevDependency = (dependency: string) => {
+        return () => {
+            setDevDependencies(old => old.filter(dep => dep !== dependency));
+        };
+    };
+
     return (
         <main className="mx-auto flex h-screen justify-center px-28 py-10">
             <div className="flex w-1/2 flex-col px-4">
@@ -257,7 +269,8 @@ export default function Home() {
                                     <Button
                                         key={dependency}
                                         variant={"secondary"}
-                                        className="dependency text-xs"
+                                        className="dependency flex text-xs"
+                                        onClick={removeDependency(dependency)}
                                     >
                                         {dependency}
                                         <XMarkIcon className="ml-2 h-4 w-4" />
@@ -277,9 +290,11 @@ export default function Home() {
                                     <Button
                                         key={dependency}
                                         variant={"secondary"}
-                                        className="dependency text-xs"
+                                        className="dependency flex text-xs"
+                                        onClick={removeDevDependency(dependency)}
                                     >
                                         {dependency}
+                                        <XMarkIcon className="ml-2 h-4 w-4" />
                                     </Button>
                                 );
                             })}
