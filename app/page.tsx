@@ -14,6 +14,7 @@ import axios from "axios";
 import { toast } from "react-hot-toast";
 
 import Button from "@/components/ui/Button";
+import SearchBar from "@/components/SearchBar";
 
 function useDebounce(callback: (t: string) => Promise<void> | void) {
     let timeout: null | NodeJS.Timeout = null;
@@ -173,14 +174,7 @@ export default function Home() {
     return (
         <main className="mx-auto flex h-screen justify-center px-28 py-10">
             <div className="flex w-1/2 flex-col px-4">
-                <div className="input flex w-full text-gray-700">
-                    <input
-                        type="text"
-                        placeholder="Search for a package"
-                        onChange={e => search(e.target.value)}
-                        className="h-min w-full rounded-lg border-none px-6 py-4 text-xl shadow-black outline-none focus:border-none focus:shadow focus:outline-none focus:ring-0"
-                    />
-                </div>
+                <SearchBar onSearch={search} />
                 {(results == null || undefined) && (
                     <div className="flex h-full w-full flex-col items-center justify-center">
                         <img
