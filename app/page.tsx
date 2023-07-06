@@ -175,7 +175,7 @@ export default function Home() {
         <main className="mx-auto flex h-screen justify-center px-28 py-10">
             <div className="flex w-1/2 flex-col px-4">
                 <SearchBar onSearch={search} />
-                {(results == null || undefined) && (
+                {(results == null || !results.objects || results.objects.length === 0) && (
                     <div className="flex h-full w-full flex-col items-center justify-center">
                         <img
                             src="/noresult.jpg"
@@ -185,7 +185,7 @@ export default function Home() {
                         <p className="mt-4 text-xl text-gray-500">Noting to show</p>
                     </div>
                 )}
-                {results && results.objects.length > 0 && (
+                {results && results.objects?.length > 0 && (
                     <>
                         <h2 className="my-10 text-4xl font-semibold ">
                             Search results: {searched}
