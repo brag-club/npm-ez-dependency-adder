@@ -76,14 +76,15 @@ export const metadata: Metadata = {
     },
     openGraph: {
         title: "NPM Easy Dependency Adder",
-        description: "A simple tool to install dependencies and devDependencies to your project with ease. Easily search for packages and install them with a simplified command.",
+        description:
+            "A simple tool to install dependencies and devDependencies to your project with ease. Easily search for packages and install them with a simplified command.",
         url: "https://deps.chirag.codes",
         type: "website",
         siteName: "NPM Easy Dependency Adder",
         images: [
             {
                 url: "https://deps.chirag.codes/og-image.png",
-            }
+            },
         ],
         locale: "en_US",
     },

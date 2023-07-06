@@ -123,7 +123,7 @@ export default function Home() {
     };
 
     const buttomInteraction = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-        const interactSent : ButtonInteraction = e.currentTarget.value as ButtonInteraction;
+        const interactSent: ButtonInteraction = e.currentTarget.value as ButtonInteraction;
         e.preventDefault();
 
         switch (interactSent) {
@@ -133,7 +133,9 @@ export default function Home() {
                 break;
             }
             case "copy devDep": {
-                navigator.clipboard.writeText(`${prefPMInstallCmd} -D ${devDependencies.join(" ")}`);
+                navigator.clipboard.writeText(
+                    `${prefPMInstallCmd} -D ${devDependencies.join(" ")}`,
+                );
 
                 break;
             }
