@@ -124,19 +124,17 @@ export default function Home() {
     };
 
     const buttomInteraction = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-        let interactSent = e.currentTarget.value;
+        const interactSent : ButtonInteraction = e.currentTarget.value as ButtonInteraction;
         e.preventDefault();
 
         switch (interactSent) {
             case "copy dep": {
-                interactSent = `${prefPMInstallCmd} ${dependencies.join(" ")}`;
-                navigator.clipboard.writeText(interactSent);
+                navigator.clipboard.writeText(`${prefPMInstallCmd} ${dependencies.join(" ")}`);
 
                 break;
             }
             case "copy devDep": {
-                interactSent = `${prefPMInstallCmd} -D ${devDependencies.join(" ")}`;
-                navigator.clipboard.writeText(interactSent);
+                navigator.clipboard.writeText(`${prefPMInstallCmd} -D ${devDependencies.join(" ")}`);
 
                 break;
             }
