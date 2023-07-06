@@ -1,12 +1,58 @@
+import { Metadata } from "next";
 import { Roboto_Mono } from "next/font/google";
 
 import "./globals.css";
 
 const roboto = Roboto_Mono({ subsets: ["latin"] });
 
-export const metadata = {
-    title: "Nextjs 13, TailwindCss Template",
-    description: "A template for frontend developers created By Chirag Bhalotia",
+export const metadata: Metadata = {
+    title: "NPM Easy Dependency Adder",
+    description:
+        "A simple tool to install dependencies and devDependencies to your project with ease. Easily search for packages and install them with a simplified command.",
+    authors: [
+        {
+            name: "Chirag Bhalotia",
+            url: "https://chirag.codes",
+        },
+        {
+            name: "Jyotirmoy Bandyopadhayaya",
+            url: "https://b68.dev",
+        },
+    ],
+    category: "Developer Tools",
+    creator: "Chirag Bhalotia",
+    keywords: [
+        "npm",
+        "npm install",
+        "npm install package",
+        "npm install package --save",
+        "npm install package --save-dev",
+        "pnpm install",
+        "pnpm",
+        "pnpm add",
+        "yarn",
+        "yarn add",
+        "yarn add package",
+        "yarn install",
+        "npmjs",
+        "npm.io",
+        "package manager",
+        "package",
+        "package.json",
+        "package-lock.json",
+        "pnpm-lock.yaml",
+        "yarn.lock",
+    ],
+    abstract:
+        "A simple tool to install dependencies and devDependencies to your project with ease. Easily search for packages and install them with a simplified command.",
+    applicationName: "NPM Easy Dependency Adder",
+    colorScheme: "light",
+    viewport: "width=device-width, initial-scale=1.0",
+    twitter: {
+        title: "NPM Easy Dependency Adder",
+        card: "summary",
+        site: "https://deps.chirag.codes",
+    },
 };
 
 interface RootLayoutProps {
