@@ -71,7 +71,6 @@ export default function Home() {
     const preFetch = searchParams.get("pre") ?? "";
 
     useEffect(() => {
-        // This will run only once
         if (preContentRead) return;
         const depData = Buffer.from(preFetch, "base64").toString("utf8");
         const [deps, devDeps] = JSON.parse(depData);

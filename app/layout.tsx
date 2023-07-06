@@ -72,7 +72,28 @@ export const metadata: Metadata = {
         title: "NPM Easy Dependency Adder",
         card: "summary",
         site: "https://deps.chirag.codes",
+        images: "https://deps.chirag.codes/og-image.png",
     },
+    openGraph: {
+        title: "NPM Easy Dependency Adder",
+        description: "A simple tool to install dependencies and devDependencies to your project with ease. Easily search for packages and install them with a simplified command.",
+        url: "https://deps.chirag.codes",
+        type: "website",
+        siteName: "NPM Easy Dependency Adder",
+        images: [
+            {
+                url: "https://deps.chirag.codes/og-image.png",
+            }
+        ],
+        locale: "en_US",
+    },
+    assets: [
+        "https://deps.chirag.codes/og-image.png",
+        "https://deps.chirag.codes/favicon.ico",
+        "https://deps.chirag.codes/nores",
+    ],
+    metadataBase: new URL("https://deps.chirag.codes/"),
+    manifest: "/manifest.json",
 };
 
 interface RootLayoutProps {
