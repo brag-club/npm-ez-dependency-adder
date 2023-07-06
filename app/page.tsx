@@ -7,11 +7,11 @@ import { ClipboardDocumentIcon, ShareIcon, TrashIcon } from "@heroicons/react/24
 import axios from "axios";
 import { toast } from "react-hot-toast";
 
+import Contributors from "@/components/Contributors";
 import DependenciesList from "@/components/DependenciesList";
 import Results from "@/components/Results";
 import SearchBar from "@/components/SearchBar";
 import Button from "@/components/ui/Button";
-import Contributors from "@/components/Contributors";
 
 function useDebounce(callback: (t: string) => Promise<void> | void) {
     let timeout: null | NodeJS.Timeout = null;
