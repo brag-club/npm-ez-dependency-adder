@@ -16,6 +16,7 @@ import { toast } from "react-hot-toast";
 import SearchBar from "@/components/SearchBar";
 import Button from "@/components/ui/Button";
 import Results from "@/components/Results";
+import DependenciesList from "@/components/DependenciesList";
 
 function useDebounce(callback: (t: string) => Promise<void> | void) {
     let timeout: null | NodeJS.Timeout = null;
@@ -196,45 +197,18 @@ export default function Home() {
                 )}
 
                 {dependencies.length > 0 && (
-                    <>
-                        <p className="mb-2 text-lg font-semibold">Dependencies: </p>
-                        <div className="dependencies flex w-full flex-wrap gap-3 ">
-                            {dependencies.map(dependency => {
-                                return (
-                                    <Button
-                                        key={dependency}
-                                        variant={"secondary"}
-                                        className="dependency flex text-xs"
-                                        onClick={removeDependency(dependency)}
-                                    >
-                                        {dependency}
-                                        <XMarkIcon className="ml-2 h-4 w-4" />
-                                    </Button>
-                                );
-                            })}
-                        </div>
-                    </>
+                    <DependenciesList
+                        name="Dependencies"
+                        dependencies={dependencies}
+                        onRemove={removeDependency}
+                    />
                 )}
                 {devDependencies.length > 0 && (
-                    <>
-                        <p className="mb-2 mt-4 text-lg font-semibold">Dev Dependencies: </p>
-                        <div className="dependencies flex w-full flex-wrap gap-3 ">
-                            {devDependencies.map(dependency => {
-                                return (
-                                    <Button
-                                        key={dependency}
-                                        variant={"secondary"}
-                                        className="dependency flex text-xs"
-                                        onClick={removeDevDependency(dependency)}
-                                    >
-                                        {dependency}
-                                        <XMarkIcon className="ml-2 h-4 w-4" />
-                                    </Button>
-                                );
-                            })}
-                            {/* <Button className="dependency text-xs">{"Copy Command"}</Button> */}
-                        </div>
-                    </>
+                    <DependenciesList
+                        name="Dev Dependencies"
+                        dependencies={devDependencies}
+                        onRemove={removeDevDependency}
+                    />
                 )}
                 <div className="commands-section mt-auto flex w-full flex-col gap-5">
                     <div className="selector">
