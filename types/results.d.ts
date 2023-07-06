@@ -47,5 +47,5 @@ interface ISearchPackagesResult {
 interface ISearchResults {
     objects: ISearchPackagesResult[] | [];
     total: number;
-    time: Date;
+    time: string;
 }

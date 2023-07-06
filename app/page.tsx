@@ -2,7 +2,12 @@
 
 import { useState } from "react";
 
-import { ArrowUpRightIcon, ClipboardDocumentIcon, TrashIcon } from "@heroicons/react/24/outline";
+import {
+    ArrowUpRightIcon,
+    ClipboardDocumentIcon,
+    TrashIcon,
+    XMarkIcon,
+} from "@heroicons/react/24/outline";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 
@@ -24,8 +29,8 @@ function useDebounce(callback: (t: string) => Promise<void> | void) {
     };
 }
 
-function handleLastUpdated(date: Date, currentDate: Date) {
-    const now = currentDate;
+function handleLastUpdated(date: Date, currentDate: string) {
+    const now = new Date(currentDate);
     const diff = now.getTime() - date.getTime();
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
     const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -255,6 +260,7 @@ export default function Home() {
                                         className="dependency text-xs"
                                     >
                                         {dependency}
+                                        <XMarkIcon className="ml-2 h-4 w-4" />
                                     </Button>
                                 );
                             })}
