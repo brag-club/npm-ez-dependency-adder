@@ -24,7 +24,7 @@ function useDebounce(callback: (t: string) => Promise<void> | void) {
     };
 }
 
-function handleLastUpdated(date: Date) {
+function handleLastUpdated(date: Date, currentDate: Date) {
     const now = new Date();
     const diff = now.getTime() - date.getTime();
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
@@ -51,7 +51,7 @@ function handleLastUpdated(date: Date) {
 
 export default function Home() {
     const [searched, setSearched] = useState("");
-    const [results, setResults] = useState<ISearchResult[]>([]);
+    const [results, setResults] = useState<ISearchResults>();
 
     const [dependencies, setDependencies] = useState<string[]>([]);
     const [devDependencies, setDevDependencies] = useState<string[]>([]);
@@ -61,15 +61,15 @@ export default function Home() {
     const search = useDebounce(async (input: string) => {
         try {
             if (input === "") {
-                return setResults([]);
+                return setResults(undefined);
             }
-            const res = await axios.get("https://npm.io/api/v1/search", {
+            const res = await axios.get("https://registry.npmjs.com/-/v1/search", {
                 params: {
-                    query: input,
+                    text: input,
                 },
             });
-            const data = res.data?.list as ISearchResult[] | null;
-            if (!data) return setResults([]);
+            const data = res.data as ISearchResults;
+            if (!data) return setResults(undefined);
             setResults(data);
             setSearched(input);
         } catch {
@@ -138,7 +138,7 @@ export default function Home() {
                         className="h-min w-full rounded-lg border-none px-6 py-4 text-xl shadow-black outline-none focus:border-none focus:shadow focus:outline-none focus:ring-0"
                     />
                 </div>
-                {results.length === 0 && (
+                {results == null && (
                     <div className="flex h-full w-full flex-col items-center justify-center">
                         <img
                             src="/noresult.jpg"
@@ -148,19 +148,19 @@ export default function Home() {
                         <p className="mt-4 text-xl text-gray-500">Noting to show</p>
                     </div>
                 )}
-                {results.length > 0 && (
+                {results?.objects.length! > 0 && (
                     <>
                         <h2 className="my-10 text-4xl font-semibold ">
                             Search results: {searched}
                         </h2>
                         <div className="results h-full w-full overflow-y-auto">
-                            {results.map(result => {
+                            {results?.objects.map(result => {
                                 return (
-                                    <div key={result.name} className="result border-b-2 py-5">
+                                    <div key={result.package.name} className="result border-b-2 py-5">
                                         <h2 className="text-2xl font-semibold tracking-wider">
-                                            {result.name}
+                                            {result.package.name}
                                             <a
-                                                href={"https://npmjs.com/package/" + result.name}
+                                                href={result.package.links.npm}
                                                 className="text-blue-500"
                                                 target="_blank"
                                                 rel="noreferrer"
@@ -169,10 +169,10 @@ export default function Home() {
                                             </a>
                                         </h2>
                                         <p className="pt-2 text-sm text-gray-800">
-                                            {result.description}
+                                            {result.package.description ? result.package.description : "No description available"}
                                         </p>
                                         <div className="tags my-6 flex w-full flex-wrap gap-3">
-                                            {result.keywords?.map(keyword => {
+                                            {result.package.keywords?.map(keyword => {
                                                 return (
                                                     <div
                                                         key={keyword}
@@ -184,22 +184,22 @@ export default function Home() {
                                             })}
                                         </div>
                                         <div className="info flex items-center gap-2 text-xs text-gray-500">
-                                            <p className="version">{result.version}</p> {"•"}
+                                            <p className="version">{result.package.version}</p> {"•"}
                                             <p className="date">
                                                 Last Updated :-{" "}
-                                                {handleLastUpdated(new Date(result.modified))}
+                                                {handleLastUpdated(new Date(result.package.date), results.time)}
                                             </p>
                                         </div>
                                         <div className="buttons mt-4 flex gap-3">
                                             <Button
-                                                onClick={addDependency(result.name)}
-                                                disabled={dependencies.includes(result.name)}
+                                                onClick={addDependency(result.package.name)}
+                                                disabled={dependencies.includes(result.package.name)}
                                             >
                                                 Add
                                             </Button>
                                             <Button
-                                                onClick={addDevDependency(result.name)}
-                                                disabled={devDependencies.includes(result.name)}
+                                                onClick={addDevDependency(result.package.name)}
+                                                disabled={devDependencies.includes(result.package.name)}
                                             >
                                                 Add as dev
                                             </Button>
