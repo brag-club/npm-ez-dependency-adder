@@ -249,11 +249,11 @@ export default function Home() {
                             Select Dependencies that you want to install in your project
                         </p>
                         <div className="dependencies flex w-full py-9">
-                            <div className="dependency flex flex-col items-center justify-center gap-2">
+                            <div className="dependency mx-auto flex flex-col items-center justify-center gap-2">
                                 <img
-                                    src="https://raw.githubusercontent.com/npm/logos/master/npm%20logo/npm-logo-red.png"
+                                    src="/logo.svg"
                                     alt="npm logo"
-                                    className="h-30 w-60 object-contain"
+                                    className="h-30 w-60 object-contain object-center"
                                 />
                             </div>
                         </div>
