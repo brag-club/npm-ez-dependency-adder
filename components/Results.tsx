@@ -61,6 +61,17 @@ function Results({
                                 <ArrowUpRightIcon className="inline-block h-4 w-4" />
                             </a>
                         </h2>
+                        {result?.package?.publisher?.username && (
+                                <a
+                                    href={"https://npmjs.com/~"+result?.package?.publisher?.username}
+                                    className="text-red-500"
+                                    target="_blank"
+                                    referrerPolicy="no-referrer"
+                                    rel="noreferrer"
+                                >
+                                   by @{result?.package?.publisher?.username}
+                                </a>
+                        )}
                         <p className="pt-2 text-sm text-gray-800">
                             {result.package.description
                                 ? result.package.description
@@ -110,6 +121,7 @@ function Results({
                                     <Github />
                                 </a>
                             )}
+                            
                         </div>
                     </div>
                 );
