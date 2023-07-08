@@ -1,6 +1,7 @@
 import React from "react";
 
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
+import { Github } from "lucide-react";
 
 import Button from "./ui/Button";
 
@@ -97,6 +98,12 @@ function Results({
                             >
                                 Add as dev
                             </Button>
+                            <div className="flex-1"></div>
+                            {result?.package?.links?.repository && (
+                                <a href={result?.package?.links?.repository} className="p-2 rounded-full bg-gray-800 text-white mr-5" target="_blank" referrerPolicy="no-referrer">
+                                    <Github />
+                                </a>
+                            )}
                         </div>
                     </div>
                 );
