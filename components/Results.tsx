@@ -100,7 +100,13 @@ function Results({
                             </Button>
                             <div className="flex-1"></div>
                             {result?.package?.links?.repository && (
-                                <a href={result?.package?.links?.repository} className="p-2 rounded-full bg-gray-800 text-white mr-5" target="_blank" referrerPolicy="no-referrer">
+                                <a
+                                    href={result?.package?.links?.repository}
+                                    className="mr-5 rounded-full bg-gray-800 p-2 text-white"
+                                    target="_blank"
+                                    referrerPolicy="no-referrer"
+                                    rel="noreferrer"
+                                >
                                     <Github />
                                 </a>
                             )}

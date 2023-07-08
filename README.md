@@ -10,38 +10,41 @@ npm-ez-dependency-adder is a platform meant to select add npm packages to your p
 
 ## 🛠️ Technologies Used
 
-- Node.js
-- Next.js
-- Tailwind CSS
+-   Node.js
+-   Next.js
+-   Tailwind CSS
 
 ## 🚀 Features
 
-- Select multiple dependencies as you like
+-   Select multiple dependencies as you like
 
 ## 🎁 Project Setup
 
 ### To run the development server
 
-- In the project root run the following command to install the dependencies
+-   In the project root run the following command to install the dependencies
 
 ```
 yarn
 ```
-or 
+
+or
+
 ```
 npm install
 ```
 
-- and then to start the development server
+-   and then to start the development server
 
-``` 
+```
 yarn dev
 ```
+
 or
+
 ```
 npm run dev
 ```
-
 
 ## 📝 License
 
