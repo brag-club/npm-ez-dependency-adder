@@ -4,14 +4,15 @@
     <img src="./public/logo.svg" />
 </p>
 
-![Screenshot](./public/screenshot.png)
-
 ![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/chirag3003/npm-ez-dependency-adder/lint.yaml?style=for-the-badge&logo=github&logoColor=blue)
 
 
 ## 📝 Description
 
 npm-ez-dependency-adder is a platform meant to select add npm packages to your project with ease. This platform is built using Nextjs. (Not responsive currently)
+
+
+![Screenshot](./public/screenshot.png)
 
 ## 🛠️ Technologies Used
 
