@@ -8,7 +8,6 @@ interface ISearchPackagesResult {
         date: Date;
         links: {
             npm: string;
-            // TODO: Show Repository URL as Button in package card
             homepage?: string;
             repository?: string;
             issues?: string;
@@ -19,7 +18,6 @@ interface ISearchPackagesResult {
             email?: string;
             url?: string;
         };
-        // TODO: Show Publisher Username in package card as @username
         publisher?: {
             username: string;
             email?: string;
