@@ -5,7 +5,7 @@ import { useSearchParams } from "next/navigation";
 
 import { ClipboardDocumentIcon, ShareIcon, TrashIcon } from "@heroicons/react/24/outline";
 import axios from "axios";
-import { toast } from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 
 import Contributors from "@/components/Contributors";
 import DependenciesList from "@/components/DependenciesList";
@@ -90,6 +90,8 @@ export default function Home() {
         const interactSent: ButtonInteraction = e.currentTarget.value as ButtonInteraction;
         e.preventDefault();
 
+        toast.success("Copied to clipboard");
+
         switch (interactSent) {
             case "copy dep": {
                 navigator.clipboard.writeText(`${prefPMInstallCmd} ${dependencies.join(" ")}`);
@@ -145,6 +147,7 @@ export default function Home() {
 
     return (
         <main className="mx-auto flex h-screen justify-center px-28 py-10">
+            <Toaster />
             <div className="flex w-1/2 flex-col px-4">
                 <SearchBar onSearch={search} />
                 {(results == null || !results.objects || results.objects.length === 0) && (
