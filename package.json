@@ -1,6 +1,6 @@
 {
     "private": true,
-    "name": "next13-tailwind-template",
+    "name": "npm-ez-dependency-adder-ui",
     "version": "0.1.0",
     "scripts": {
         "build": "next build",
