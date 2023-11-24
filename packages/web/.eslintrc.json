@@ -1,6 +1,6 @@
 {
     "$schema": "https://json.schemastore.org/eslintrc",
-    "extends": ["next/core-web-vitals", "@bravo68web/eslint-config/code-style"],
+    "extends": ["@bravo68web/eslint-config", "next"],
     "rules": {
         "@next/next/no-img-element": "off",
         "react/button-has-type": "off",

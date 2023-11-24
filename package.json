@@ -4,8 +4,20 @@
   "workspaces": [
     "packages/*"
   ],
-  "packageManager": "yarn@3.6.4",
+  "packageManager": "pnpm@8.6.4",
+  "scripts": {
+    "dev": "turbo dev",
+    "start": "turbo start",
+    "build": "turbo build"
+  },
   "devDependencies": {
+    "@bravo68web/eslint-config": "^1.2.2",
+    "@bravo68web/prettier-config": "^1.2.2",
+    "@bravo68web/tsconfig": "^1.2.2",
+    "@next/eslint-plugin-next": "^13.5.4",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "3",
     "turbo": "^1.10.15"
-  }
+  },
+  "prettier": "@bravo68web/prettier-config"
 }
