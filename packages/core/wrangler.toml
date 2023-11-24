@@ -1,0 +1,7 @@
+name = "npm-ez-deps-addr"
+main = "src/index.ts"
+compatibility_date = "2022-10-31"
+kv_namespaces = [
+  { binding = "CONFIGSTORE", id = "5a22b68a2d6646bb9b52ef85e214560e", preview_id = "5a22b68a2d6646bb9b52ef85e214560e" }
+]
+workers_dev = true
