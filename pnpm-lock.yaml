@@ -32,6 +32,9 @@ importers:
 
   packages/core:
     devDependencies:
+      '@bravo68web/tsconfig':
+        specifier: ^1.2.2
+        version: 1.2.2(typescript@4.8.4)
       '@cloudflare/workers-types':
         specifier: ^3.18.0
         version: 3.18.0
@@ -242,6 +245,14 @@ packages:
       - supports-color
       - terser
       - webdriverio
+    dev: true
+
+  /@bravo68web/tsconfig@1.2.2(typescript@4.8.4):
+    resolution: {integrity: sha512-4ZJebs6w1yt2eNk0c8rZsaWAIjtE3HPquQRcB94JNRRnT57ceP627p9KqFHN11tS7lmMJqU6DYfB0g3hNl8KDQ==}
+    peerDependencies:
+      typescript: 5.x
+    dependencies:
+      typescript: 4.8.4
     dev: true
 
   /@bravo68web/tsconfig@1.2.2(typescript@5.1.6):
