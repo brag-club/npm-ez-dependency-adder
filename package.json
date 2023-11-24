@@ -15,11 +15,11 @@
         "@heroicons/react": "^2.0.18",
         "@hookform/resolvers": "^3.3.2",
         "@tailwindcss/forms": "^0.5.6",
-        "@types/node": "20.8.7",
         "@types/react": "18.2.37",
+        "@types/node": "20.9.2",
         "@types/react-dom": "18.2.14",
         "autoprefixer": "10.4.16",
-        "axios": "^1.5.1",
+        "axios": "^1.6.2",
         "class-variance-authority": "^0.7.0",
         "clsx": "^2.0.0",
         "eslint": "8.50.0",
@@ -31,7 +31,7 @@
         "react-dom": "18.2.0",
         "react-hook-form": "^7.47.0",
         "react-hot-toast": "^2.4.1",
-        "tailwind-merge": "^1.14.0",
+        "tailwind-merge": "^2.0.0",
         "tailwindcss": "3.3.3",
         "typescript": "5.2.2",
         "zod": "^3.22.4"
@@ -40,7 +40,7 @@
         "@bravo68web/eslint-config": "^1.2.2",
         "@bravo68web/prettier-config": "^1.2.2",
         "@bravo68web/tsconfig": "^1.2.2",
-        "eslint-plugin-prettier": "^5.0.0",
+        "eslint-plugin-prettier": "^5.0.1",
         "prettier": "3"
     },
     "prettier": "@bravo68web/prettier-config"
