@@ -1,10 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { useSearchParams } from "next/navigation";
-
 import { ClipboardDocumentIcon, ShareIcon, TrashIcon } from "@heroicons/react/24/outline";
 import axios from "axios";
+import { useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 
 import Contributors from "@/components/Contributors";

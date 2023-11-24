@@ -1,6 +1,5 @@
-import React, { ButtonHTMLAttributes } from "react";
-
 import { cva, VariantProps } from "class-variance-authority";
+import React, { ButtonHTMLAttributes } from "react";
 
 const buttonVariants = cva("px-4 py-2", {
     variants: {

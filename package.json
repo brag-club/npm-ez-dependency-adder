@@ -1,47 +1,23 @@
 {
-    "private": true,
-    "name": "npm-ez-dependency-adder-ui",
-    "version": "0.1.0",
-    "scripts": {
-        "build": "next build",
-        "dev": "next dev",
-        "format": "prettier --write .",
-        "lint": "next lint",
-        "lint:fix": "next lint --fix",
-        "start": "next start"
-    },
-    "dependencies": {
-        "@headlessui/react": "^1.7.17",
-        "@heroicons/react": "^2.0.18",
-        "@hookform/resolvers": "^3.3.2",
-        "@tailwindcss/forms": "^0.5.6",
-        "@types/react": "18.2.37",
-        "@types/node": "20.9.2",
-        "@types/react-dom": "18.2.14",
-        "autoprefixer": "10.4.16",
-        "axios": "^1.6.2",
-        "class-variance-authority": "^0.7.0",
-        "clsx": "^2.0.0",
-        "eslint": "8.50.0",
-        "eslint-config-next": "13.5.6",
-        "lucide-react": "^0.287.0",
-        "next": "13.5.6",
-        "postcss": "8.4.31",
-        "react": "18.2.0",
-        "react-dom": "18.2.0",
-        "react-hook-form": "^7.47.0",
-        "react-hot-toast": "^2.4.1",
-        "tailwind-merge": "^2.0.0",
-        "tailwindcss": "3.3.3",
-        "typescript": "5.2.2",
-        "zod": "^3.22.4"
-    },
-    "devDependencies": {
-        "@bravo68web/eslint-config": "^1.2.2",
-        "@bravo68web/prettier-config": "^1.2.2",
-        "@bravo68web/tsconfig": "^1.2.2",
-        "eslint-plugin-prettier": "^5.0.1",
-        "prettier": "3"
-    },
-    "prettier": "@bravo68web/prettier-config"
+  "name": "npm-deps-turbo",
+  "version": "0.0.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "packageManager": "pnpm@8.6.4",
+  "scripts": {
+    "dev": "turbo dev",
+    "start": "turbo start",
+    "build": "turbo build"
+  },
+  "devDependencies": {
+    "@bravo68web/eslint-config": "^1.2.2",
+    "@bravo68web/prettier-config": "^1.2.2",
+    "@bravo68web/tsconfig": "^1.2.2",
+    "@next/eslint-plugin-next": "^13.5.4",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "3",
+    "turbo": "^1.10.15"
+  },
+  "prettier": "@bravo68web/prettier-config"
 }
