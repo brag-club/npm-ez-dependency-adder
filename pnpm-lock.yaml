@@ -10,7 +10,7 @@ importers:
     devDependencies:
       '@bravo68web/eslint-config':
         specifier: ^1.2.2
-        version: 1.2.2(eslint@8.49.0)(tailwindcss@3.3.3)(typescript@5.3.2)
+        version: 1.2.2(eslint@8.49.0)(tailwindcss@3.3.5)(typescript@5.3.2)
       '@bravo68web/prettier-config':
         specifier: ^1.2.2
         version: 1.2.2(eslint@8.49.0)(prettier@3.0.0)
@@ -43,7 +43,7 @@ importers:
         version: 3.3.1(react-hook-form@7.48.2)
       '@tailwindcss/forms':
         specifier: ^0.5.6
-        version: 0.5.6(tailwindcss@3.3.3)
+        version: 0.5.6(tailwindcss@3.3.5)
       '@types/node':
         specifier: 20.6.5
         version: 20.6.5
@@ -96,8 +96,8 @@ importers:
         specifier: ^1.14.0
         version: 1.14.0
       tailwindcss:
-        specifier: 3.3.3
-        version: 3.3.3
+        specifier: 3.3.5
+        version: 3.3.5
       typescript:
         specifier: 5.3.2
         version: 5.3.2
@@ -107,7 +107,7 @@ importers:
     devDependencies:
       '@bravo68web/eslint-config':
         specifier: ^1.2.2
-        version: 1.2.2(eslint@8.49.0)(tailwindcss@3.3.3)(typescript@5.3.2)
+        version: 1.2.2(eslint@8.49.0)(tailwindcss@3.3.5)(typescript@5.3.2)
       '@bravo68web/prettier-config':
         specifier: ^1.2.2
         version: 1.2.2(eslint@8.49.0)(prettier@3.0.0)
@@ -159,7 +159,7 @@ packages:
     dependencies:
       regenerator-runtime: 0.14.0
 
-  /@bravo68web/eslint-config@1.2.2(eslint@8.49.0)(tailwindcss@3.3.3)(typescript@5.3.2):
+  /@bravo68web/eslint-config@1.2.2(eslint@8.49.0)(tailwindcss@3.3.5)(typescript@5.3.2):
     resolution: {integrity: sha512-ToZEiBtVmZe4pfD+mHKxN0wgGBABCfFTeqplJpW8ygc6DTamBOkgIp1hB6yWd6ZA9qCTExDPQk9cZxmyGPt+5Q==}
     peerDependencies:
       eslint: 8.x
@@ -179,7 +179,7 @@ packages:
       eslint-plugin-security: 1.7.1
       eslint-plugin-simple-import-sort: 10.0.0(eslint@8.49.0)
       eslint-plugin-sonarjs: 0.19.0(eslint@8.49.0)
-      eslint-plugin-tailwindcss: 3.12.1(tailwindcss@3.3.3)
+      eslint-plugin-tailwindcss: 3.12.1(tailwindcss@3.3.5)
       eslint-plugin-unicorn: 47.0.0(eslint@8.49.0)
       typescript: 5.3.2
     transitivePeerDependencies:
@@ -693,13 +693,13 @@ packages:
       tslib: 2.6.2
     dev: false
 
-  /@tailwindcss/forms@0.5.6(tailwindcss@3.3.3):
+  /@tailwindcss/forms@0.5.6(tailwindcss@3.3.5):
     resolution: {integrity: sha512-Fw+2BJ0tmAwK/w01tEFL5TiaJBX1NLT1/YbWgvm7ws3Qcn11kiXxzNTEQDMs5V3mQemhB56l3u0i9dwdzSQldA==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1'
     dependencies:
       mini-svg-data-uri: 1.4.4
-      tailwindcss: 3.3.3
+      tailwindcss: 3.3.5
     dev: false
 
   /@types/chai-subset@1.3.3:
@@ -2081,7 +2081,7 @@ packages:
       eslint: 8.49.0
     dev: true
 
-  /eslint-plugin-tailwindcss@3.12.1(tailwindcss@3.3.3):
+  /eslint-plugin-tailwindcss@3.12.1(tailwindcss@3.3.5):
     resolution: {integrity: sha512-LyIRV0rx6prTpJZsSCXSNJ34Yry3Nj9OJwvzh1xTsiG6+UCnAPW1Bx41s7vZzUDKMlwFgpUN9Me+NK12T4DHYg==}
     engines: {node: '>=12.13.0'}
     peerDependencies:
@@ -2089,7 +2089,7 @@ packages:
     dependencies:
       fast-glob: 3.3.1
       postcss: 8.4.29
-      tailwindcss: 3.3.3
+      tailwindcss: 3.3.5
     dev: true
 
   /eslint-plugin-unicorn@47.0.0(eslint@8.49.0):
@@ -4018,8 +4018,8 @@ packages:
     resolution: {integrity: sha512-3mFKyCo/MBcgyOTlrY8T7odzZFx+w+qKSMAmdFzRvqBfLlSigU6TZnlFHK0lkMwj9Bj8OYU+9yW9lmGuS0QEnQ==}
     dev: false
 
-  /tailwindcss@3.3.3:
-    resolution: {integrity: sha512-A0KgSkef7eE4Mf+nKJ83i75TMyq8HqY3qmFIJSWy8bNt0v1lG7jUcpGpoTFxAwYcWOphcTBLPPJg+bDfhDf52w==}
+  /tailwindcss@3.3.5:
+    resolution: {integrity: sha512-5SEZU4J7pxZgSkv7FP1zY8i2TIAOooNZ1e/OGtxIEv6GltpoiXUqWvLy89+a10qYTB1N5Ifkuw9lqQkN9sscvA==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
