@@ -133,8 +133,8 @@ importers:
         specifier: ^1.2.2
         version: 1.2.2(typescript@4.8.4)
       '@cloudflare/workers-types':
-        specifier: ^3.18.0
-        version: 3.18.0
+        specifier: ^4.20231121.0
+        version: 4.20231121.0
       typescript:
         specifier: ^4.8.4
         version: 4.8.4
@@ -353,8 +353,8 @@ packages:
       mime: 3.0.0
     dev: true
 
-  /@cloudflare/workers-types@3.18.0:
-    resolution: {integrity: sha512-ehKOJVLMeR+tZkYhWEaLYQxl0TaIZu/kE86HF3/RidR8Xv5LuQxpbh+XXAoKVqsaphWLhIgBhgnlN5HGdheXSQ==}
+  /@cloudflare/workers-types@4.20231121.0:
+    resolution: {integrity: sha512-+kWfpCkqiepwAKXyHoE0gnkPgkLhz0/9HOBIGhHRsUvUKvhUtm3mbqqoGRWgF1qcjzrDUBbrrOq4MYHfFtc2RA==}
     dev: true
 
   /@esbuild-plugins/node-globals-polyfill@0.1.1(esbuild@0.14.51):
