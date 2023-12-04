@@ -60,8 +60,8 @@ importers:
         specifier: 18.2.7
         version: 18.2.7
       autoprefixer:
-        specifier: 10.4.15
-        version: 10.4.15(postcss@8.4.29)
+        specifier: 10.4.16
+        version: 10.4.16(postcss@8.4.29)
       axios:
         specifier: ^1.5.1
         version: 1.5.1
@@ -1475,8 +1475,8 @@ packages:
     engines: {node: '>=0.8'}
     dev: true
 
-  /autoprefixer@10.4.15(postcss@8.4.29):
-    resolution: {integrity: sha512-KCuPB8ZCIqFdA4HwKXsvz7j6gvSDNhDP7WnUjBleRkKjPdvCmHFuQ77ocavI8FT6NdvlBnE2UFr2H4Mycn8Vew==}
+  /autoprefixer@10.4.16(postcss@8.4.29):
+    resolution: {integrity: sha512-7vd3UC6xKp0HLfua5IjZlcXvGAGy7cBAXTg2lyQ/8WpNhd6SiZ8Be+xm3FyBSYJx5GKcpRCzBh7RH4/0dnY+uQ==}
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
     peerDependencies:
