@@ -1,7 +1,7 @@
 <h1 align="center"> npm-ez-dependency-adder </h1>
 
 <p align="center">
-    <img src="./packages/web/public/logo.svg" />
+    <img src="./apps/web/public/logo.svg" />
 </p>
 
 ![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/chirag3003/npm-ez-dependency-adder/build.yaml?style=for-the-badge&logo=github&logoColor=blue)
