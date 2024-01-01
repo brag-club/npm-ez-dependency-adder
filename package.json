@@ -15,7 +15,7 @@
     "@bravo68web/prettier-config": "^1.2.2",
     "@bravo68web/tsconfig": "^1.2.2",
     "@next/eslint-plugin-next": "^14.0.4",
-    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-prettier": "^5.1.2",
     "prettier": "3",
     "turbo": "^1.10.15"
   },
