@@ -21,7 +21,7 @@
         "autoprefixer": "10.4.16",
         "axios": "^1.5.1",
         "class-variance-authority": "^0.7.0",
-        "clsx": "^2.0.0",
+        "clsx": "^2.1.0",
         "eslint": "8.49.0",
         "eslint-config-next": "14.0.4",
         "lucide-react": "^0.309.0",
