@@ -15,8 +15,8 @@ importers:
         specifier: ^1.2.3
         version: 1.2.3(eslint@8.56.0)(prettier@3.0.0)
       '@bravo68web/tsconfig':
-        specifier: ^1.2.2
-        version: 1.2.2(typescript@5.3.3)
+        specifier: ^1.2.3
+        version: 1.2.3(typescript@5.3.3)
       '@next/eslint-plugin-next':
         specifier: ^14.0.4
         version: 14.0.4
@@ -118,8 +118,8 @@ importers:
         specifier: ^1.2.3
         version: 1.2.3(@types/node@20.11.2)(eslint@8.49.0)(prettier@3.0.0)
       '@bravo68web/tsconfig':
-        specifier: ^1.2.2
-        version: 1.2.2(typescript@5.3.3)
+        specifier: ^1.2.3
+        version: 1.2.3(typescript@5.3.3)
       eslint-plugin-prettier:
         specifier: ^5.1.2
         version: 5.1.2(eslint@8.49.0)(prettier@3.0.0)
@@ -130,8 +130,8 @@ importers:
   packages/core:
     devDependencies:
       '@bravo68web/tsconfig':
-        specifier: ^1.2.2
-        version: 1.2.2(typescript@5.3.3)
+        specifier: ^1.2.3
+        version: 1.2.3(typescript@5.3.3)
       '@cloudflare/workers-types':
         specifier: ^4.20231218.0
         version: 4.20231218.0
@@ -326,8 +326,8 @@ packages:
       - terser
     dev: true
 
-  /@bravo68web/tsconfig@1.2.2(typescript@5.3.3):
-    resolution: {integrity: sha512-4ZJebs6w1yt2eNk0c8rZsaWAIjtE3HPquQRcB94JNRRnT57ceP627p9KqFHN11tS7lmMJqU6DYfB0g3hNl8KDQ==}
+  /@bravo68web/tsconfig@1.2.3(typescript@5.3.3):
+    resolution: {integrity: sha512-sLN/KD4nRZ1XAEaGk9pHEBXpPASUD71yNsDbA4Xr9KGgsEfnsZvqB+9Ap4ISAlyIq3FVqLEvC7mihVjkiMUF+w==}
     peerDependencies:
       typescript: 5.x
     dependencies:
