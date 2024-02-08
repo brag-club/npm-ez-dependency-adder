@@ -12,7 +12,7 @@
 npm-ez-dependency-adder is a platform meant to select add npm packages to your project with ease. This platform is built using Nextjs. (Not responsive currently)
 
 
-![Screenshot](./packages/web/public/screenshot.png)
+![Screenshot](./apps/web/public/screenshot.png)
 
 ## 🛠️ Technologies Used
 
