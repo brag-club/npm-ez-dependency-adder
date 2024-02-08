@@ -78,8 +78,8 @@ importers:
         specifier: 14.1.0
         version: 14.1.0(eslint@8.49.0)(typescript@5.3.3)
       lucide-react:
-        specifier: ^0.322.0
-        version: 0.322.0(react@18.2.0)
+        specifier: ^0.321.0
+        version: 0.321.0(react@18.2.0)
       next:
         specifier: 14.0.4
         version: 14.0.4(react-dom@18.2.0)(react@18.2.0)
@@ -3971,8 +3971,8 @@ packages:
     dependencies:
       yallist: 4.0.0
 
-  /lucide-react@0.322.0(react@18.2.0):
-    resolution: {integrity: sha512-7knx2HzI/J7wCVaAzbO4y622PYjBqy4w03DvXKri0EBxg1s3ogPHkLXvFoNVS6WTXgxLsIZDdvgY3AWQmc4JXA==}
+  /lucide-react@0.321.0(react@18.2.0):
+    resolution: {integrity: sha512-Fi9VahIna6642U+2nAGSjnXwUBV3WyfFFPQq4yi3w30jtqxDLfSyiYCtCYCYQZ2KWNZc1MDI+rcsa0t+ChdYpw==}
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0
     dependencies:
