@@ -7,7 +7,7 @@
     "type": "module",
     "main": "index.mts",
     "scripts": {
-        "dev": "node --no-warnings --loader @esbuild-kit/esm-loader index.mts",
+        "dev:cli": "node --no-warnings --loader @esbuild-kit/esm-loader index.mts",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "dependencies": {

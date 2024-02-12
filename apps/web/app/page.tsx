@@ -1,6 +1,6 @@
 "use client";
 
-import { ClipboardDocumentIcon, ShareIcon, TrashIcon } from "@heroicons/react/24/outline";
+import { ClipboardDocumentIcon, ShareIcon, TrashIcon, CommandLineIcon } from "@heroicons/react/24/outline";
 import axios from "axios";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -11,6 +11,7 @@ import DependenciesList from "@/components/DependenciesList";
 import Results from "@/components/Results";
 import SearchBar from "@/components/SearchBar";
 import Button from "@/components/ui/Button";
+import CLIpalette from "@/components/CLIPalette";
 
 function useDebounce(callback: (t: string) => Promise<void> | void) {
     let timeout: null | NodeJS.Timeout = null;
@@ -37,6 +38,8 @@ export default function Home() {
 
     const [prefPMInstallCmd, setPrefPMInstallCmd] = useState<PackageManagers>("yarn add");
     const [preContentRead, setPreContentRead] = useState<boolean>(false);
+    const [isCLIPalleteActive, setIsCLIPalleteActive] = useState<boolean>(false);
+    const [cliShareKey, setCloudShareKey] = useState<string>("");
 
     const searchParams = useSearchParams();
 
@@ -51,7 +54,7 @@ export default function Home() {
                 params: {
                     text: input,
                 },
-            });
+            })
             const data = res.data as ISearchResults;
             if (!data) return setResults(undefined);
             setResults(data);
@@ -119,6 +122,31 @@ export default function Home() {
                 navigator.clipboard.writeText(url.toString());
 
                 break;
+            }
+
+            case "cli copy": {
+                console.log("cli copy")
+                const depData = JSON.stringify([dependencies, devDependencies]);
+                const encodeText = Buffer.from(depData).toString("base64");
+                
+                const saveForShare = async (encodeData: string) => { 
+                    try {
+                        const { data } = await axios.post(process.env.NEXT_PUBLIC_SHARE_API!, {
+                            data: encodeData
+                        }) 
+                        const shareText = `npx ezaddr init ${data.code}`;
+                        setCloudShareKey(shareText)
+                        navigator.clipboard.writeText(
+                            shareText
+                        );
+                        setIsCLIPalleteActive(true);
+                    }
+                    catch(err){
+                        console.log(err)
+                    }
+                }
+
+                saveForShare(encodeText);
             }
         }
     };
@@ -286,7 +314,18 @@ export default function Home() {
                                 <p className="ml-2">Share</p>
                             </div>
                         </Button>
+                        <Button
+                            className="rounded-none"
+                            onClick={buttomInteraction}
+                            value={"cli copy"}
+                        >
+                            <div className="flex items-center justify-center">
+                                <CommandLineIcon className="h-6 w-6" />
+                                <p className="ml-2">CLI</p>
+                            </div>
+                        </Button>
                     </div>
+                    {/* <CLIpalette isActive={isCLIPalleteActive} commandInitCode={cliShareKey}/> */}
                     <Contributors />
                 </div>
             </div>
