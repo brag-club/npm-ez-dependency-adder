@@ -12,8 +12,8 @@ importers:
         specifier: ^1.2.3
         version: 1.2.3(eslint@8.57.0)(prettier@3.0.0)(tailwindcss@3.4.1)(typescript@5.4.2)
       '@bravo68web/prettier-config':
-        specifier: ^1.2.3
-        version: 1.2.3(@types/node@20.11.28)(eslint@8.57.0)(prettier@3.0.0)
+        specifier: ^1.2.4
+        version: 1.2.4(@types/node@20.11.28)(eslint@8.57.0)(prettier@3.0.0)
       '@bravo68web/tsconfig':
         specifier: ^1.2.3
         version: 1.2.3(typescript@5.4.2)
@@ -134,8 +134,8 @@ importers:
         specifier: ^1.2.3
         version: 1.2.3(eslint@8.57.0)(prettier@3.0.0)(tailwindcss@3.4.1)(typescript@5.4.2)
       '@bravo68web/prettier-config':
-        specifier: ^1.2.3
-        version: 1.2.3(@types/node@20.11.28)(eslint@8.57.0)(prettier@3.0.0)
+        specifier: ^1.2.4
+        version: 1.2.4(@types/node@20.11.28)(eslint@8.57.0)(prettier@3.0.0)
       '@bravo68web/tsconfig':
         specifier: ^1.2.3
         version: 1.2.3(typescript@5.4.2)
@@ -230,8 +230,8 @@ packages:
       - tailwindcss
     dev: true
 
-  /@bravo68web/prettier-config@1.2.3(@types/node@20.11.28)(eslint@8.57.0)(prettier@3.0.0):
-    resolution: {integrity: sha512-WDzE+Ocxw3yVntrP6YnWnkKrH7o9NKyiWCwdgKi9RL1Gvo7Gq5LsoIDZcpVt5bWQJz03NQjK26oWugwCILAxzg==}
+  /@bravo68web/prettier-config@1.2.4(@types/node@20.11.28)(eslint@8.57.0)(prettier@3.0.0):
+    resolution: {integrity: sha512-6Ld/jQ9wrs3aqhmKewx9Aod2MVU8vrPAsiSn18n9HJSaXRM5JZ/bDKHiZeBoBxWifHkR6uTTPhj4TSbJ0dst5g==}
     peerDependencies:
       prettier: 2.x || 3.x
     dependencies:
