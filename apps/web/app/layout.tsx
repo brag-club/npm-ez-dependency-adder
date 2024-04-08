@@ -66,8 +66,6 @@ export const metadata: Metadata = {
     abstract:
         "A simple tool to install dependencies and devDependencies to your project with ease. Easily search for packages and install them with a simplified command.",
     applicationName: "NPM Easy Dependency Adder",
-    colorScheme: "light",
-    viewport: "width=device-width, initial-scale=1.0",
     twitter: {
         title: "NPM Easy Dependency Adder",
         card: "summary",
