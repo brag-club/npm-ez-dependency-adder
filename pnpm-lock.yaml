@@ -127,8 +127,8 @@ importers:
         specifier: 5.4.5
         version: 5.4.5
       zod:
-        specifier: ^3.22.4
-        version: 3.22.4
+        specifier: ^3.23.0
+        version: 3.23.0
     devDependencies:
       '@bravo68web/eslint-config':
         specifier: ^1.2.3
@@ -3792,7 +3792,7 @@ packages:
       workerd: 1.20240405.0
       ws: 8.14.2
       youch: 3.3.3
-      zod: 3.22.4
+      zod: 3.23.0
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -5039,7 +5039,7 @@ packages:
       json5: 2.2.3
       normalize-path: 3.0.0
       safe-stable-stringify: 2.4.3
-      typescript: 5.4.2
+      typescript: 5.4.5
     dev: true
 
   /tsconfig-paths@3.14.2:
@@ -5545,5 +5545,5 @@ packages:
       stacktracey: 2.1.8
     dev: true
 
-  /zod@3.22.4:
-    resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
+  /zod@3.23.0:
+    resolution: {integrity: sha512-OFLT+LTocvabn6q76BTwVB0hExEBS0IduTr3cqZyMqEDbOnYmcU+y0tUAYbND4uwclpBGi4I4UUBGzylWpjLGA==}
