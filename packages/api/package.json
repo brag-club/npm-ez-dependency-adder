@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "dev": "wrangler dev src/index.ts",
+    "dev": "pnpm dev --remote",
+    "dev:local": "wrangler dev src/index.ts",
     "deploy": "wrangler deploy --minify src/index.ts"
   },
   "dependencies": {
