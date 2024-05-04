@@ -1,6 +1,15 @@
 "use client";
 
+<<<<<<< HEAD
 import { ClipboardDocumentIcon, ShareIcon, TrashIcon, CommandLineIcon } from "@heroicons/react/24/outline";
+=======
+import { 
+    ArrowRightEndOnRectangleIcon,
+    ClipboardDocumentIcon, 
+    ShareIcon, 
+    TrashIcon
+} from "@heroicons/react/24/outline";
+>>>>>>> feature/cli
 import axios from "axios";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -92,18 +101,18 @@ export default function Home() {
         const interactSent: ButtonInteraction = e.currentTarget.value as ButtonInteraction;
         e.preventDefault();
 
-        toast.success("Copied to clipboard");
-
         switch (interactSent) {
             case "copy dep": {
                 navigator.clipboard.writeText(`${prefPMInstallCmd} ${dependencies.join(" ")}`);
-
+                toast.success("Copied to clipboard");
+                
                 break;
             }
             case "copy devDep": {
                 navigator.clipboard.writeText(
                     `${prefPMInstallCmd} -D ${devDependencies.join(" ")}`,
                 );
+                toast.success("Copied to clipboard");
 
                 break;
             }
@@ -124,6 +133,7 @@ export default function Home() {
                 break;
             }
 
+<<<<<<< HEAD
             case "cli copy": {
                 console.log("cli copy")
                 const depData = JSON.stringify([dependencies, devDependencies]);
@@ -147,6 +157,24 @@ export default function Home() {
                 }
 
                 saveForShare(encodeText);
+=======
+            case "install-cli": {
+                if(dependencies.length === 0 && devDependencies.length === 0) {
+                    toast.error("No dependencies selected");
+                    return;
+                }
+
+                axios.post(process.env.NEXT_PUBLIC_ADDR_API!,{
+                    data: Buffer.from(JSON.stringify([dependencies, devDependencies])).toString("base64")
+                }, {
+                    headers: {
+                        "Access-Control-Allow-Origin": "*",
+                    }
+                }).then(res => res.data).then(data => {
+                    toast.success("Data sent to the server");
+                    console.log(data);
+                });
+>>>>>>> feature/cli
             }
         }
     };
@@ -317,11 +345,19 @@ export default function Home() {
                         <Button
                             className="rounded-none"
                             onClick={buttomInteraction}
+<<<<<<< HEAD
                             value={"cli copy"}
                         >
                             <div className="flex items-center justify-center">
                                 <CommandLineIcon className="h-6 w-6" />
                                 <p className="ml-2">CLI</p>
+=======
+                            value={"install-cli"}
+                        >
+                            <div className="flex items-center justify-center">
+                                <ArrowRightEndOnRectangleIcon className="h-6 w-6" />
+                                <p className="ml-2">Install via CLI</p>
+>>>>>>> feature/cli
                             </div>
                         </Button>
                     </div>

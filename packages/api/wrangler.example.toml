@@ -1,0 +1,7 @@
+name = "npm-ez-deps-addr"
+compatibility_date = "2023-01-01"
+
+[[kv_namespaces]]
+binding = "NPMEZDEPSADDR"
+id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+preview_id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
