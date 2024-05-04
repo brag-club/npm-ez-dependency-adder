@@ -1,15 +1,6 @@
 "use client";
 
-<<<<<<< HEAD
 import { ClipboardDocumentIcon, ShareIcon, TrashIcon, CommandLineIcon } from "@heroicons/react/24/outline";
-=======
-import { 
-    ArrowRightEndOnRectangleIcon,
-    ClipboardDocumentIcon, 
-    ShareIcon, 
-    TrashIcon
-} from "@heroicons/react/24/outline";
->>>>>>> feature/cli
 import axios from "axios";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -133,7 +124,6 @@ export default function Home() {
                 break;
             }
 
-<<<<<<< HEAD
             case "cli copy": {
                 console.log("cli copy")
                 const depData = JSON.stringify([dependencies, devDependencies]);
@@ -157,24 +147,6 @@ export default function Home() {
                 }
 
                 saveForShare(encodeText);
-=======
-            case "install-cli": {
-                if(dependencies.length === 0 && devDependencies.length === 0) {
-                    toast.error("No dependencies selected");
-                    return;
-                }
-
-                axios.post(process.env.NEXT_PUBLIC_ADDR_API!,{
-                    data: Buffer.from(JSON.stringify([dependencies, devDependencies])).toString("base64")
-                }, {
-                    headers: {
-                        "Access-Control-Allow-Origin": "*",
-                    }
-                }).then(res => res.data).then(data => {
-                    toast.success("Data sent to the server");
-                    console.log(data);
-                });
->>>>>>> feature/cli
             }
         }
     };
