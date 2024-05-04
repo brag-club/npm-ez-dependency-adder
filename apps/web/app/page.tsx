@@ -317,19 +317,11 @@ export default function Home() {
                         <Button
                             className="rounded-none"
                             onClick={buttomInteraction}
-<<<<<<< HEAD
                             value={"cli copy"}
                         >
                             <div className="flex items-center justify-center">
                                 <CommandLineIcon className="h-6 w-6" />
                                 <p className="ml-2">CLI</p>
-=======
-                            value={"install-cli"}
-                        >
-                            <div className="flex items-center justify-center">
-                                <ArrowRightEndOnRectangleIcon className="h-6 w-6" />
-                                <p className="ml-2">Install via CLI</p>
->>>>>>> feature/cli
                             </div>
                         </Button>
                     </div>
