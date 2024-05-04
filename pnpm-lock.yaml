@@ -32,6 +32,21 @@ importers:
 
   apps/cli:
     dependencies:
+      '@clerc/plugin-completions':
+        specifier: ^0.44.0
+        version: 0.44.0(@clerc/core@0.42.2)
+      '@clerc/plugin-friendly-error':
+        specifier: ^0.44.0
+        version: 0.44.0(@clerc/core@0.42.2)
+      '@clerc/plugin-help':
+        specifier: ^0.44.0
+        version: 0.44.0(@clerc/core@0.42.2)
+      '@clerc/plugin-not-found':
+        specifier: ^0.44.0
+        version: 0.44.0(@clerc/core@0.42.2)
+      '@clerc/plugin-version':
+        specifier: ^0.44.0
+        version: 0.44.0(@clerc/core@0.42.2)
       chalk:
         specifier: ^5.3.0
         version: 5.3.0
@@ -298,8 +313,26 @@ packages:
       '@clerc/utils': 0.42.2(@clerc/core@0.42.2)
     dev: false
 
+  /@clerc/plugin-completions@0.44.0(@clerc/core@0.42.2):
+    resolution: {integrity: sha512-r69KpaB+EcWccqe31OwK5iyJQZmgmhxJjEBL4RAGlRr2tu6MRX42AOmD3GDW+ZPHkc4D9NJdkqukLboTJlbycA==}
+    peerDependencies:
+      '@clerc/core': '*'
+    dependencies:
+      '@clerc/core': 0.42.2
+      '@clerc/utils': 0.44.0(@clerc/core@0.42.2)
+    dev: false
+
   /@clerc/plugin-friendly-error@0.42.2(@clerc/core@0.42.2):
     resolution: {integrity: sha512-J1BMUUqEd3u0QmhI9yQh8R1GxwHnkyCyRd88sFAUDm1PHC96oLDEFh87hk6Nwsioskf0jMx2oRT2bJXTtf+i7w==}
+    peerDependencies:
+      '@clerc/core': '*'
+    dependencies:
+      '@clerc/core': 0.42.2
+      kons: 0.7.1
+    dev: false
+
+  /@clerc/plugin-friendly-error@0.44.0(@clerc/core@0.42.2):
+    resolution: {integrity: sha512-hbGp+T+fl9Dz+Ln1LGoijbNL7N+RfBqhSRWtT55QdFPs86O7Mi5oqiqIrUS9wDpaHzJGn+ETFPIOUyDRdrD8ag==}
     peerDependencies:
       '@clerc/core': '*'
     dependencies:
@@ -320,6 +353,19 @@ packages:
       yoctocolors: 1.0.0
     dev: false
 
+  /@clerc/plugin-help@0.44.0(@clerc/core@0.42.2):
+    resolution: {integrity: sha512-QIH+Lrk6WZtXKNxEAA4gOk7dwseS7U0jTZ0TbJfcyOoNA3fF2p48UV8c7hmKk7OhfPS5009eJRW5CVQEgBB8Ng==}
+    peerDependencies:
+      '@clerc/core': '*'
+    dependencies:
+      '@clerc/core': 0.42.2
+      '@clerc/utils': 0.44.0(@clerc/core@0.42.2)
+      '@types/text-table': 0.2.5
+      string-width: 6.1.0
+      text-table: 0.2.0
+      yoctocolors: 1.0.0
+    dev: false
+
   /@clerc/plugin-not-found@0.42.2(@clerc/core@0.42.2):
     resolution: {integrity: sha512-7SL93h18RonwgfGRApIuceLREi2xbMQGJzd90wBLy+si5Xi9kTvjUGFX3NZDgfYO0PR6U0w5nBsAP1hIZ5r69Q==}
     peerDependencies:
@@ -328,6 +374,17 @@ packages:
       '@clerc/core': 0.42.2
       '@clerc/utils': 0.42.2(@clerc/core@0.42.2)
       didyoumean2: 5.0.0
+      yoctocolors: 1.0.0
+    dev: false
+
+  /@clerc/plugin-not-found@0.44.0(@clerc/core@0.42.2):
+    resolution: {integrity: sha512-8GIxDv/V2qaKRJKy+jjHAmlCEbTabLYPIeklqY231skiNOYCDQ3wJS3isP7EQgARfhm0otMDRXPPC2aNfSJjRw==}
+    peerDependencies:
+      '@clerc/core': '*'
+    dependencies:
+      '@clerc/core': 0.42.2
+      '@clerc/utils': 0.44.0(@clerc/core@0.42.2)
+      didyoumean2: 6.0.1
       yoctocolors: 1.0.0
     dev: false
 
@@ -348,8 +405,25 @@ packages:
       '@clerc/utils': 0.42.2(@clerc/core@0.42.2)
     dev: false
 
+  /@clerc/plugin-version@0.44.0(@clerc/core@0.42.2):
+    resolution: {integrity: sha512-YETH54A0sO32oJcLABpb4P5FyhEkhIhe5oe3IXyeUj9/LMcInvKCm6x/gDMIUjTQuh0a5l4iton0A1RscAANhw==}
+    peerDependencies:
+      '@clerc/core': '*'
+    dependencies:
+      '@clerc/core': 0.42.2
+      '@clerc/utils': 0.44.0(@clerc/core@0.42.2)
+    dev: false
+
   /@clerc/utils@0.42.2(@clerc/core@0.42.2):
     resolution: {integrity: sha512-/MaFEUxcGOgRA9Z5JWMVAvQHm2HXDntaw1SRwErZ4ANDD9D7jubnB2lYTN4vfIAdMYxxK+Hv/eX4OvpM63BFeQ==}
+    peerDependencies:
+      '@clerc/core': '*'
+    dependencies:
+      '@clerc/core': 0.42.2
+    dev: false
+
+  /@clerc/utils@0.44.0(@clerc/core@0.42.2):
+    resolution: {integrity: sha512-//1zl8UgVhv1NbqsRoCWWci0Y9uBxzAVn8TqoKZchDywGQNZWK6vQI/Ms9uGe3+PZTDXedoXbVjklOINcVC2aA==}
     peerDependencies:
       '@clerc/core': '*'
     dependencies:
@@ -2232,6 +2306,15 @@ packages:
   /didyoumean2@5.0.0:
     resolution: {integrity: sha512-Plha9WCF08aSGB39IsOhlk0AHecwcXtq/gMbHgylRNEv7JV3lnlt7akfdax7mnUHndEuuh57CmBaKSSXns7+YA==}
     engines: {node: '>=12.13'}
+    dependencies:
+      '@babel/runtime': 7.24.4
+      fastest-levenshtein: 1.0.16
+      lodash.deburr: 4.1.0
+    dev: false
+
+  /didyoumean2@6.0.1:
+    resolution: {integrity: sha512-PSy0zQwMg5O+LjT5Mz7vnKC8I7DfWLPF6M7oepqW7WP5mn2CY3hz46xZOa1GJY+KVfyXhdmz6+tdgXwrHlZc5g==}
+    engines: {node: ^16.14.0 || >=18.12.0}
     dependencies:
       '@babel/runtime': 7.24.4
       fastest-levenshtein: 1.0.16

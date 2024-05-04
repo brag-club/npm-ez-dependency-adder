@@ -1,4 +1,5 @@
-import { Clerc, defineCommand } from "clerc";
+import { Clerc, defineCommand, friendlyErrorPlugin, completionsPlugin, helpPlugin, notFoundPlugin, versionPlugin, Root } from "clerc";
+
 import enquirer from "enquirer";
 import path from "node:path";
 import fs from "node:fs";
@@ -72,10 +73,16 @@ const installCommand = defineCommand(
 );
 
 const cli = Clerc.create()
-    .name("NPM CLI") // Optional, defaults to scriptName
-    .scriptName("NPM-cli")
+    .name("NPM CLI")
+    .scriptName("npzz")
     .description("A cli tool to install npm packages faster")
-    .version("1.0.0") // You can use Clerc.create(name, description, version) instead
+    .version("1.0.0")
+    .use(friendlyErrorPlugin())    
+    .use(completionsPlugin()) 
+    .use(notFoundPlugin()) 
+    .use(versionPlugin()) 
+    .use(helpPlugin())
     .command(initCommand)
     .command(installCommand)
+    .command(Root, "Home")
     .parse();
