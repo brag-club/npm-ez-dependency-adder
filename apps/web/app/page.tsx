@@ -69,11 +69,8 @@ export default function Home() {
         }
     });
     const buttomInteraction = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        // Choosing the action based on the value of clicked button
         const interactSent: ButtonInteraction = e.currentTarget.value as ButtonInteraction;
-        e.preventDefault();
-
-        toast.success("Copied to clipboard");
-
         switch (interactSent) {
             case "copy dep": {
                 navigator.clipboard.writeText(`${prefPMInstallCmd} ${dependencies.join(" ")}`);
@@ -104,6 +101,9 @@ export default function Home() {
                 break;
             }
         }
+
+        //Displaying success message after copying to clipboard
+        toast.success("Copied to clipboard");
     };
 
     useEffect(() => {
