@@ -55,10 +55,6 @@ export default function Home() {
                             Search results: {searched}
                         </h2>
                         <Results
-                            addDependency={addDependency}
-                            addDevDependency={addDevDependency}
-                            dependencies={dependencies}
-                            devDependencies={devDependencies}
                             results={results}
                         />
                     </>

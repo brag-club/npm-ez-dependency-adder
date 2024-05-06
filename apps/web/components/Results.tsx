@@ -3,13 +3,10 @@ import { Github } from "lucide-react";
 import React from "react";
 
 import Button from "./ui/Button";
+import { useDependencies } from "@/contexts/dependencies";
 
 interface ResultsInterface {
     results: ISearchResults;
-    dependencies: string[];
-    devDependencies: string[];
-    addDependency: (t: string) => () => void;
-    addDevDependency: (t: string) => () => void;
 }
 
 function handleLastUpdated(date: Date, currentDate: string) {
@@ -39,11 +36,8 @@ function handleLastUpdated(date: Date, currentDate: string) {
 
 function Results({
     results,
-    dependencies,
-    devDependencies,
-    addDependency,
-    addDevDependency,
 }: ResultsInterface) {
+    const {dependencies, devDependencies, addDependency, addDevDependency} = useDependencies()
     return (
         <div className="results h-full w-full overflow-y-auto">
             {results?.objects.map(result => {
