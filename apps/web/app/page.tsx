@@ -51,7 +51,7 @@ export default function Home() {
                 )}
                 {results && results.objects?.length > 0 && (
                     <>
-                        <h2 className="my-10 text-4xl font-semibold ">
+                        <h2 className="my-4 mb-2 text-4xl font-semibold ">
                             Search results: {searched}
                         </h2>
                         <Results

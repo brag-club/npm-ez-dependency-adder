@@ -39,7 +39,7 @@ function Results({
 }: ResultsInterface) {
     const {dependencies, devDependencies, addDependency, addDevDependency} = useDependencies()
     return (
-        <div className="results h-full w-full overflow-y-auto">
+        <div className="results h-full w-full overflow-y-auto pt-1">
             {results?.objects.map(result => {
                 return (
                     <div key={result.package.name} className="result border-b-2 py-5">
