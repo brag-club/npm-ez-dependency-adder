@@ -1,3 +1,4 @@
+import { DependencyProvider } from "@/contexts/dependencies";
 import "./globals.css";
 
 import { Metadata } from "next";
@@ -102,7 +103,9 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
     return (
         <html lang="en">
-            <body className={`${roboto.className} bg-background text-text`}>{children}</body>
+            <body className={`${roboto.className} bg-background text-text`}>
+                <DependencyProvider>{children}</DependencyProvider>
+            </body>
         </html>
     );
 }

@@ -11,6 +11,7 @@ import DependenciesList from "@/components/DependenciesList";
 import Results from "@/components/Results";
 import SearchBar from "@/components/SearchBar";
 import Button from "@/components/ui/Button";
+import { useDependencies } from "@/contexts/dependencies";
 
 function useDebounce(callback: (t: string) => Promise<void> | void) {
     let timeout: null | NodeJS.Timeout = null;
@@ -31,14 +32,21 @@ function useDebounce(callback: (t: string) => Promise<void> | void) {
 export default function Home() {
     const [searched, setSearched] = useState("");
     const [results, setResults] = useState<ISearchResults>();
-
-    const [dependencies, setDependencies] = useState<string[]>([]);
-    const [devDependencies, setDevDependencies] = useState<string[]>([]);
-
-    const [prefPMInstallCmd, setPrefPMInstallCmd] = useState<PackageManagers>("yarn add");
     const [preContentRead, setPreContentRead] = useState<boolean>(false);
-
     const searchParams = useSearchParams();
+
+    const {
+        addDependency,
+        addDevDependency,
+        dependencies,
+        devDependencies,
+        prefPMInstallCmd,
+        removeDependency,
+        removeDevDependency,
+        selectPackageManager,
+        setDependencies,
+        setDevDependencies,
+    } = useDependencies();
 
     const preFetch = searchParams.get("pre") ?? "";
 
@@ -60,31 +68,6 @@ export default function Home() {
             toast.error("Error Searching for packages");
         }
     });
-
-    const addDependency = (dependency: string) => {
-        return () => {
-            if (devDependencies.includes(dependency)) {
-                setDevDependencies(old => old.filter(dep => dep !== dependency));
-            }
-
-            setDependencies(old => [...old, dependency]);
-        };
-    };
-
-    const addDevDependency = (dependency: string) => {
-        return () => {
-            if (dependencies.includes(dependency)) {
-                setDependencies(old => old.filter(dep => dep !== dependency));
-            }
-
-            setDevDependencies(old => [...old, dependency]);
-        };
-    };
-
-    const selectPackageManager = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        setPrefPMInstallCmd(e.target.value as PackageManagers);
-    };
-
     const buttomInteraction = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         const interactSent: ButtonInteraction = e.currentTarget.value as ButtonInteraction;
         e.preventDefault();
@@ -121,18 +104,6 @@ export default function Home() {
                 break;
             }
         }
-    };
-
-    const removeDependency = (dependency: string) => {
-        return () => {
-            setDependencies(old => old.filter(dep => dep !== dependency));
-        };
-    };
-
-    const removeDevDependency = (dependency: string) => {
-        return () => {
-            setDevDependencies(old => old.filter(dep => dep !== dependency));
-        };
     };
 
     useEffect(() => {
