@@ -12,22 +12,7 @@ import Results from "@/components/Results";
 import SearchBar from "@/components/SearchBar";
 import Button from "@/components/ui/Button";
 import { useDependencies } from "@/contexts/dependencies";
-
-function useDebounce(callback: (t: string) => Promise<void> | void) {
-    let timeout: null | NodeJS.Timeout = null;
-
-    return (txt: string) => {
-        if (timeout) {
-            clearTimeout(timeout);
-            timeout = null;
-        }
-        const t = setTimeout(() => {
-            callback(txt);
-            timeout = null;
-        }, 500);
-        timeout = t;
-    };
-}
+import { useDebounce } from "@/lib/debounce";
 
 export default function Home() {
     const [searched, setSearched] = useState("");
@@ -74,20 +59,17 @@ export default function Home() {
         switch (interactSent) {
             case "copy dep": {
                 navigator.clipboard.writeText(`${prefPMInstallCmd} ${dependencies.join(" ")}`);
-
                 break;
             }
             case "copy devDep": {
                 navigator.clipboard.writeText(
                     `${prefPMInstallCmd} -D ${devDependencies.join(" ")}`,
                 );
-
                 break;
             }
             case "reset": {
                 setDependencies([]);
                 setDevDependencies([]);
-
                 break;
             }
 
@@ -97,7 +79,6 @@ export default function Home() {
                 const url = new URL(window.location.href);
                 url.searchParams.set("pre", preFetch);
                 navigator.clipboard.writeText(url.toString());
-
                 break;
             }
         }
