@@ -87,7 +87,7 @@ export default function Home() {
             </div>
 
             <div className="flex w-1/2 flex-col px-4 py-0 h-full">
-                <div className="flex flex-col h-full overflow-y-auto">
+                <div className="flex flex-col h-full overflow-hidden">
                     <Dependencies />
                 </div>
                 <Contributors />

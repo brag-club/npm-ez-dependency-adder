@@ -69,22 +69,23 @@ function Dependencies() {
                     </div>
                 </>
             )}
-
-            {dependencies.length > 0 && (
-                <DependenciesList
-                    name="Dependencies"
-                    dependencies={dependencies}
-                    onRemove={removeDependency}
-                />
-            )}
-            {devDependencies.length > 0 && (
-                <DependenciesList
-                    name="Dev Dependencies"
-                    dependencies={devDependencies}
-                    onRemove={removeDevDependency}
-                />
-            )}
-            <div className="commands-section mt-auto flex w-full flex-col gap-5">
+            <div className="list h-full overflow-y-auto">
+                {dependencies.length > 0 && (
+                    <DependenciesList
+                        name="Dependencies"
+                        dependencies={dependencies}
+                        onRemove={removeDependency}
+                    />
+                )}
+                {devDependencies.length > 0 && (
+                    <DependenciesList
+                        name="Dev Dependencies"
+                        dependencies={devDependencies}
+                        onRemove={removeDevDependency}
+                    />
+                )}
+            </div>
+            <div className="commands-section flex w-full flex-col gap-1 mt-2">
                 <div className="selector">
                     <label
                         htmlFor="location"
