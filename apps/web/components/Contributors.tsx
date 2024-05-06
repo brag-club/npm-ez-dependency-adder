@@ -2,7 +2,7 @@ import React from "react";
 
 function Contributors() {
     return (
-        <div className="mt-10 flex w-full justify-center">
+        <div className="mt-5 flex w-full justify-center">
             <p className="text-sm text-gray-500">
                 Made with ❤️ by
                 <a href="https://github.com/chirag3003" className="text-blue-700">

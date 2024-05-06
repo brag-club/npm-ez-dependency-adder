@@ -63,7 +63,7 @@ function Dependencies() {
                             <img
                                 src="/logo.svg"
                                 alt="npm logo"
-                                className="h-30 w-60 object-contain object-center"
+                                className="h-60 w-auto max-h-[20vh] object-contain object-center"
                             />
                         </div>
                     </div>
@@ -156,7 +156,6 @@ function Dependencies() {
                         </div>
                     </Button>
                 </div>
-                <Contributors />
             </div>
         </>
     );

@@ -8,6 +8,7 @@ import SearchBar from "@/components/SearchBar";
 import { useDependencies } from "@/contexts/dependencies";
 import { useDebounce } from "@/lib/debounce";
 import Dependencies from "@/components/Dependencies";
+import Contributors from "@/components/Contributors";
 
 export default function Home() {
     const [searched, setSearched] = useState("");
@@ -20,7 +21,8 @@ export default function Home() {
         addDevDependency,
         dependencies,
         devDependencies,
-        setDependencies,        setDevDependencies,
+        setDependencies,
+        setDevDependencies,
     } = useDependencies();
 
     const preFetch = searchParams.get("pre") ?? "";
@@ -54,9 +56,9 @@ export default function Home() {
     }, [preContentRead, preFetch]);
 
     return (
-        <main className="mx-auto flex h-screen justify-center px-28 py-10">
+        <main className="mx-auto flex h-screen justify-center px-28 py-8 overflow-hidden">
             <Toaster />
-            <div className="flex w-1/2 flex-col px-4">
+            <div className="flex w-1/2 flex-col px-4 h-full">
                 <SearchBar onSearch={search} />
                 {(results == null || !results.objects || results.objects.length === 0) && (
                     <div className="flex h-full w-full flex-col items-center justify-center">
@@ -84,8 +86,11 @@ export default function Home() {
                 )}
             </div>
 
-            <div className="flex w-1/2 flex-col px-4 py-12">
-                <Dependencies />
+            <div className="flex w-1/2 flex-col px-4 py-0 h-full">
+                <div className="flex flex-col h-full overflow-y-auto">
+                    <Dependencies />
+                </div>
+                <Contributors />
             </div>
         </main>
     );
