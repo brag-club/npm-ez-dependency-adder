@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, createContext, useContext } from "react";
+import { useSearchParams } from "next/navigation";
+import { useState, createContext, useContext, useEffect } from "react";
 interface DependencyContext {
     dependencies: string[];
     devDependencies: string[];
@@ -36,6 +37,10 @@ export const DependencyProvider = ({ children }: DependencyProviderProps) => {
     const [dependencies, setDependencies] = useState<string[]>([]);
     const [devDependencies, setDevDependencies] = useState<string[]>([]);
     const [prefPMInstallCmd, setPrefPMInstallCmd] = useState<PackageManagers>("yarn add");
+    const [preContentRead, setPreContentRead] = useState<boolean>(false);
+    const searchParams = useSearchParams();
+    const preFetch = searchParams.get("pre") ?? "";
+
     const addDependency = (dependency: string) => {
         return () => {
             if (devDependencies.includes(dependency)) {
@@ -67,6 +72,15 @@ export const DependencyProvider = ({ children }: DependencyProviderProps) => {
             setDevDependencies(old => old.filter(dep => dep !== dependency));
         };
     };
+    useEffect(() => {
+        if (preContentRead || !preFetch) return;
+        const depData = Buffer.from(preFetch, "base64").toString("utf8");
+        const [deps, devDeps] = JSON.parse(depData);
+        setDependencies(deps);
+        setDevDependencies(devDeps);
+        setPreContentRead(true);
+    }, [preContentRead, preFetch]);
+
 
     return (
         <depencyContext.Provider

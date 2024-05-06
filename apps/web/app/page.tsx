@@ -1,7 +1,6 @@
 "use client";
 import axios from "axios";
-import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import Results from "@/components/Results";
 import SearchBar from "@/components/SearchBar";
@@ -13,19 +12,8 @@ import Contributors from "@/components/Contributors";
 export default function Home() {
     const [searched, setSearched] = useState("");
     const [results, setResults] = useState<ISearchResults>();
-    const [preContentRead, setPreContentRead] = useState<boolean>(false);
-    const searchParams = useSearchParams();
 
-    const {
-        addDependency,
-        addDevDependency,
-        dependencies,
-        devDependencies,
-        setDependencies,
-        setDevDependencies,
-    } = useDependencies();
-
-    const preFetch = searchParams.get("pre") ?? "";
+    const { addDependency, addDevDependency, dependencies, devDependencies } = useDependencies();
 
     const search = useDebounce(async (input: string) => {
         try {
@@ -45,15 +33,6 @@ export default function Home() {
             toast.error("Error Searching for packages");
         }
     });
-
-    useEffect(() => {
-        if (preContentRead || !preFetch) return;
-        const depData = Buffer.from(preFetch, "base64").toString("utf8");
-        const [deps, devDeps] = JSON.parse(depData);
-        setDependencies(deps);
-        setDevDependencies(devDeps);
-        setPreContentRead(true);
-    }, [preContentRead, preFetch]);
 
     return (
         <main className="mx-auto flex h-screen justify-center px-28 py-8 overflow-hidden">
