@@ -26,9 +26,9 @@ export const depencyContext = createContext<DependencyContext>({
     removeDevDependency: () => () => {},
     selectPackageManager: () => {},
 });
-export const useDependencies = () => {
+export function useDependencies() {
     return useContext(depencyContext);
-};
+}
 
 interface DependencyProviderProps {
     children: React.ReactNode;
@@ -80,7 +80,6 @@ export const DependencyProvider = ({ children }: DependencyProviderProps) => {
         setDevDependencies(devDeps);
         setPreContentRead(true);
     }, [preContentRead, preFetch]);
-
 
     return (
         <depencyContext.Provider
