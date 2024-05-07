@@ -3,6 +3,7 @@ import "./globals.css";
 
 import { Metadata } from "next";
 import { Roboto_Mono } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 
 const roboto = Roboto_Mono({ subsets: ["latin"] });
 
@@ -105,6 +106,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <html lang="en">
             <body className={`${roboto.className} bg-background text-text`}>
                 <DependencyProvider>{children}</DependencyProvider>
+                <Toaster />
             </body>
         </html>
     );
