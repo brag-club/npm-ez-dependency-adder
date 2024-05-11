@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/home/rapid/Desktop/code-cring/npm-ez-dependency-adder/apps/web/app/layout\":[\"static/media/92f44bb82993d879-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"
