@@ -94,13 +94,13 @@ function Results({
                                 onClick={addDependency(result.package.name)}
                                 disabled={dependencies.includes(result.package.name)}
                             >
-                                Add
+                               { dependencies.includes(result.package.name) ?"Added": "Add"}
                             </Button>
                             <Button
                                 onClick={addDevDependency(result.package.name)}
                                 disabled={devDependencies.includes(result.package.name)}
                             >
-                                Add as dev
+                                {devDependencies.includes(result.package.name) ? "Added as Dev":"Add as dev"}
                             </Button>
                             <div className="flex-1"></div>
                             {result?.package?.links?.repository && (
