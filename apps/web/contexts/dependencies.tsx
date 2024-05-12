@@ -1,10 +1,13 @@
+/* eslint-disable unicorn/consistent-function-scoping */
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { useState, createContext, useContext, useEffect } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 interface DependencyContext {
     dependencies: string[];
     devDependencies: string[];
+    peerEnabled: boolean;
+    togglePeerEnabled: () => void;
     setDependencies: (dependencies: string[]) => void;
     setDevDependencies: (dependencies: string[]) => void;
     prefPMInstallCmd: PackageManagers;
@@ -17,6 +20,8 @@ interface DependencyContext {
 export const depencyContext = createContext<DependencyContext>({
     dependencies: [],
     devDependencies: [],
+    peerEnabled: false,
+    togglePeerEnabled: () => {},
     setDependencies: () => {},
     setDevDependencies: () => {},
     prefPMInstallCmd: "yarn add",
@@ -38,9 +43,13 @@ export const DependencyProvider = ({ children }: DependencyProviderProps) => {
     const [devDependencies, setDevDependencies] = useState<string[]>([]);
     const [prefPMInstallCmd, setPrefPMInstallCmd] = useState<PackageManagers>("yarn add");
     const [preContentRead, setPreContentRead] = useState<boolean>(false);
+    const [peerEnabled, setPeerEnabled] = useState(false);
     const searchParams = useSearchParams();
     const preFetch = searchParams.get("pre") ?? "";
 
+    const togglePeerEnabled = () => {
+        setPeerEnabled(old => !old);
+    };
     const addDependency = (dependency: string) => {
         return () => {
             if (devDependencies.includes(dependency)) {
@@ -86,6 +95,8 @@ export const DependencyProvider = ({ children }: DependencyProviderProps) => {
             value={{
                 dependencies,
                 setDependencies,
+                peerEnabled,
+                togglePeerEnabled,
                 devDependencies,
                 setDevDependencies,
                 prefPMInstallCmd,

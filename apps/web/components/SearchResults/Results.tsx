@@ -36,7 +36,8 @@ function handleLastUpdated(date: Date, currentDate: string) {
 }
 
 function Results({ results }: ResultsInterface) {
-    const { dependencies, devDependencies, addDependency, addDevDependency } = useDependencies();
+    const { dependencies, devDependencies, addDependency, addDevDependency, peerEnabled } =
+        useDependencies();
     return (
         <div className="results h-full w-full overflow-y-auto pt-1">
             {results?.objects.map(result => {
@@ -101,6 +102,15 @@ function Results({ results }: ResultsInterface) {
                             >
                                 Add as dev
                             </Button>
+
+                            {peerEnabled && (
+                                <Button
+                                // onClick={addDevDependency(result.package.name)}
+                                // disabled={devDependencies.includes(result.package.name)}
+                                >
+                                    Add as peer
+                                </Button>
+                            )}
                             <div className="flex-1"></div>
                             {result?.package?.links?.repository && (
                                 <a
