@@ -2,8 +2,9 @@ import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import { Github } from "lucide-react";
 import React from "react";
 
-import Button from "./ui/Button";
 import { useDependencies } from "@/contexts/dependencies";
+
+import Button from "../ui/Button";
 
 interface ResultsInterface {
     results: ISearchResults;
@@ -34,10 +35,8 @@ function handleLastUpdated(date: Date, currentDate: string) {
     }
 }
 
-function Results({
-    results,
-}: ResultsInterface) {
-    const {dependencies, devDependencies, addDependency, addDevDependency} = useDependencies()
+function Results({ results }: ResultsInterface) {
+    const { dependencies, devDependencies, addDependency, addDevDependency } = useDependencies();
     return (
         <div className="results h-full w-full overflow-y-auto pt-1">
             {results?.objects.map(result => {

@@ -1,5 +1,5 @@
-import Dependencies from "@/components/Dependencies";
 import Contributors from "@/components/Contributors";
+import Dependencies from "@/components/Dependencies";
 import SearchResults from "@/components/SearchResults";
 
 export default function Home() {

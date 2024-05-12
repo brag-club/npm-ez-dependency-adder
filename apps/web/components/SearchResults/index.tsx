@@ -1,10 +1,12 @@
 "use client";
-import React, { useState } from "react";
-import SearchBar from "../SearchBar";
-import { useDebounce } from "@/lib/debounce";
-import toast from "react-hot-toast";
-import Results from "../Results";
 import axios from "axios";
+import React, { useState } from "react";
+import toast from "react-hot-toast";
+
+import { useDebounce } from "@/lib/debounce";
+
+import SearchBar from "../SearchBar";
+import Results from "./Results";
 
 function SearchResults() {
     const [searched, setSearched] = useState("");

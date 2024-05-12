@@ -1,11 +1,12 @@
-"use client"
-import React from "react";
-import Button from "../ui/Button";
-import { useDependencies } from "@/contexts/dependencies";
-import Contributors from "@/components/Contributors";
-import DependenciesList from "@/components/DependenciesList";
+"use client";
 import { ClipboardDocumentIcon, ShareIcon, TrashIcon } from "@heroicons/react/24/outline";
+import React from "react";
 import toast from "react-hot-toast";
+
+import DependenciesList from "@/components/DependenciesList";
+import { useDependencies } from "@/contexts/dependencies";
+
+import Button from "../ui/Button";
 
 function Dependencies() {
     const {

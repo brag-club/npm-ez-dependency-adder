@@ -1,9 +1,10 @@
-import { DependencyProvider } from "@/contexts/dependencies";
 import "./globals.css";
 
 import { Metadata } from "next";
 import { Roboto_Mono } from "next/font/google";
 import { Toaster } from "react-hot-toast";
+
+import { DependencyProvider } from "@/contexts/dependencies";
 
 const roboto = Roboto_Mono({ subsets: ["latin"] });
 
