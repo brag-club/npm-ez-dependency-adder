@@ -127,8 +127,8 @@ importers:
         specifier: 5.4.5
         version: 5.4.5
       zod:
-        specifier: ^3.23.6
-        version: 3.23.6
+        specifier: ^3.23.8
+        version: 3.23.8
     devDependencies:
       '@bravo68web/eslint-config':
         specifier: ^1.2.3
@@ -3772,7 +3772,7 @@ packages:
       workerd: 1.20240419.0
       ws: 8.14.2
       youch: 3.3.3
-      zod: 3.23.6
+      zod: 3.23.8
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -5501,5 +5501,5 @@ packages:
       stacktracey: 2.1.8
     dev: true
 
-  /zod@3.23.6:
-    resolution: {integrity: sha512-RTHJlZhsRbuA8Hmp/iNL7jnfc4nZishjsanDAfEY1QpDQZCahUp3xDzl+zfweE9BklxMUcgBgS1b7Lvie/ZVwA==}
+  /zod@3.23.8:
+    resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
