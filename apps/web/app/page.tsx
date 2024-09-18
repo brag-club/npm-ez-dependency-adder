@@ -50,9 +50,14 @@ export default function Home() {
             const res = await axios.get("https://registry.npmjs.com/-/v1/search", {
                 params: {
                     text: input,
+                    size: 50,
+                    from: 0,
+                    quality: 0.65,
+                    popularity: 0.98,
                 },
             });
             const data = res.data as ISearchResults;
+
             if (!data) return setResults(undefined);
             setResults(data);
             setSearched(input);
@@ -62,23 +67,19 @@ export default function Home() {
     });
 
     const addDependency = (dependency: string) => {
-        return () => {
-            if (devDependencies.includes(dependency)) {
-                setDevDependencies(old => old.filter(dep => dep !== dependency));
-            }
+        if (devDependencies.includes(dependency)) {
+            setDevDependencies(old => old.filter(dep => dep !== dependency));
+        }
 
-            setDependencies(old => [...old, dependency]);
-        };
+        setDependencies(old => [...old, dependency]);
     };
 
     const addDevDependency = (dependency: string) => {
-        return () => {
-            if (dependencies.includes(dependency)) {
-                setDependencies(old => old.filter(dep => dep !== dependency));
-            }
+        if (dependencies.includes(dependency)) {
+            setDependencies(old => old.filter(dep => dep !== dependency));
+        }
 
-            setDevDependencies(old => [...old, dependency]);
-        };
+        setDevDependencies(old => [...old, dependency]);
     };
 
     const selectPackageManager = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -153,7 +154,7 @@ export default function Home() {
                     <div className="flex h-full w-full flex-col items-center justify-center">
                         <img
                             src="/noresult.jpg"
-                            alt="no result image"
+                            alt="no result"
                             className="h-30 w-60 rounded-2xl object-contain"
                         />
                         <p className="mt-4 text-xl text-gray-500">Noting to show</p>
@@ -165,8 +166,8 @@ export default function Home() {
                             Search results: {searched}
                         </h2>
                         <Results
-                            addDependency={addDependency}
-                            addDevDependency={addDevDependency}
+                            addDependency={(dep) => () => addDependency(dep)}
+                            addDevDependency={(dep) => () => addDevDependency(dep)}
                             dependencies={dependencies}
                             devDependencies={devDependencies}
                             results={results}
@@ -174,7 +175,6 @@ export default function Home() {
                     </>
                 )}
             </div>
-
             <div className="flex w-1/2 flex-col px-4 py-12">
                 {dependencies.length === 0 && devDependencies.length === 0 && (
                     <>
@@ -219,18 +219,19 @@ export default function Home() {
                             id="location"
                             name="location"
                             className="mt-2 block w-full rounded-md border-0 py-1.5 pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-primary sm:text-sm sm:leading-6"
-                            defaultValue="yarn"
+                            defaultValue="pnpm"
                             onChange={selectPackageManager}
                         >
                             <option value={"yarn add"}>Yarn</option>
                             <option value={"npm install"}>Npm</option>
                             <option value={"pnpm add"}>Pnpm</option>
+                            <option value={"bun add"}>Bun</option>
                         </select>
                     </div>
                     <div className="command">
                         <p className="mb-3 font-medium">Dependencies</p>
                         <div className="flex w-full items-center overflow-hidden rounded-lg border border-primary shadow">
-                            <code className="h-full w-full overflow-x-auto bg-gray-50 px-4 py-2">
+                            <code className="h-full w-full overflow-x-auto bg-gray-50 px-4 py-2 text-black">
                                 <p className="w-max pr-4">
                                     {dependencies.length > 0
                                         ? `${prefPMInstallCmd} ${dependencies.join(" ")}`
@@ -249,7 +250,7 @@ export default function Home() {
                     <div className="command">
                         <p className="mb-3 font-medium">Dev Dependencies</p>
                         <div className="flex w-full items-center overflow-hidden rounded-lg border border-primary shadow">
-                            <code className="h-full w-full overflow-x-auto bg-gray-50 px-4 py-2">
+                            <code className="h-full w-full overflow-x-auto bg-gray-50 px-4 py-2 text-black">
                                 <p className="w-max pr-4">
                                     {devDependencies.length > 0
                                         ? `${prefPMInstallCmd} -D ${devDependencies.join(" ")}`
