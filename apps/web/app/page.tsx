@@ -66,19 +66,23 @@ export default function Home() {
         }
     });
 
+    const removeDependencyFromList = (old: string[], dependency: string) => {
+        return old.filter(dep => dep !== dependency);
+    };
+    
     const addDependency = (dependency: string) => {
         if (devDependencies.includes(dependency)) {
-            setDevDependencies(old => old.filter(dep => dep !== dependency));
+            setDevDependencies(old => removeDependencyFromList(old, dependency));
         }
-
+    
         setDependencies(old => [...old, dependency]);
     };
-
+    
     const addDevDependency = (dependency: string) => {
         if (dependencies.includes(dependency)) {
-            setDependencies(old => old.filter(dep => dep !== dependency));
+            setDependencies(old => removeDependencyFromList(old, dependency));
         }
-
+    
         setDevDependencies(old => [...old, dependency]);
     };
 
@@ -150,7 +154,7 @@ export default function Home() {
             <Toaster />
             <div className="flex w-1/2 flex-col px-4">
                 <SearchBar onSearch={search} />
-                {(results == null || !results.objects || results.objects.length === 0) && (
+                {(!results?.objects?.length) && (
                     <div className="flex h-full w-full flex-col items-center justify-center">
                         <img
                             src="/noresult.jpg"
