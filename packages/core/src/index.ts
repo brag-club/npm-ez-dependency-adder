@@ -1,7 +1,15 @@
-const corsHeaders = {
+const corsPostHeaders = {
     'Access-Control-Allow-Origin': 'https://dep.chirag.codes',
     'Access-Control-Allow-Methods': 'GET,HEAD,POST,OPTIONS',
     'Access-Control-Max-Age': '86400',
+    'Content-Type': 'application/json',
+};
+
+const corsGetHeaders = {
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'GET,HEAD,POST,OPTIONS',
+    'Access-Control-Max-Age': '86400',
+    'Content-Type': 'application/json',
 };
 
 export interface Env {
@@ -31,20 +39,32 @@ export default {
     },
 
     async handlePOST(request: Request, env: Env, parsedURL: URL): Promise<Response> {
-        const body: any = await request.json();
+        const body: {
+            data: {
+                [key: string]: string[]
+            }
+        } = await request.json();
         let unique = false;
         let code = "";
         if (body.hasOwnProperty('data')) {
             const { data } = body;
+
+            const keys = Object.keys(data);
+            if (keys.length === 0) {
+                return new Response(null, {status: 400})
+            }
+
+            const encodedData = JSON.stringify(data);
+
             while (!unique) {
                 code = this.generateCode(7);
                 const check = await env.CONFIGSTORE.get(code);
                 unique = !check;
             }
-            await env.CONFIGSTORE.put(code, data)
-            const rData: CONFIGSTORE_RESPONSE = {code, data}
+            await env.CONFIGSTORE.put(code, encodedData)
+            const rData: CONFIGSTORE_RESPONSE = {code, data: "Data Saved!"}
 
-            return new Response(JSON.stringify(rData), {headers: corsHeaders});
+            return new Response(JSON.stringify(rData), {headers: corsPostHeaders});
         }
         return new Response(null, {status: 400})
     },
@@ -59,7 +79,7 @@ export default {
         if(!data) {
             return new Response("No Such Key!", {status: 404})
         } else {
-            return new Response(JSON.stringify({data}), {headers: corsHeaders});
+            return new Response(data, {headers: corsGetHeaders});
         }
     },
 
