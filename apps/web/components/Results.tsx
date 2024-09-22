@@ -43,7 +43,7 @@ function Results({
     devDependencies,
     addDependency,
     addDevDependency,
-}: ResultsInterface) {
+}: Readonly<ResultsInterface>) {
     return (
         <div className="results h-full w-full overflow-y-auto">
             {results?.objects.map(result => {
@@ -61,17 +61,27 @@ function Results({
                             </a>
                         </h2>
                         {result?.package?.publisher?.username && (
-                            <a
-                                href={"https://npmjs.com/~" + result?.package?.publisher?.username}
-                                className="text-red-500"
-                                target="_blank"
-                                referrerPolicy="no-referrer"
-                                rel="noreferrer"
-                            >
-                                by @{result?.package?.publisher?.username}
-                            </a>
+                            <div className="publisher flex items-center gap-2">
+                                <p className="text-sm">Published by</p>
+                                <a
+                                    href={"https://npmjs.com/~" + result?.package?.publisher?.username}
+                                    className="text-red-500"
+                                    target="_blank"
+                                    referrerPolicy="no-referrer"
+                                    rel="noreferrer"
+                                >
+                                    @{result?.package?.publisher?.username}
+                                </a>
+                                <p className="text-sm">•</p>
+                                <p className="text-sm">
+                                    <img
+                                        src={`https://img.shields.io/npm/dw/${result.package.name}?style=for-the-badge&logo=npm&logoColor=red`}
+                                        alt="npm downloads"
+                                    />
+                                </p>
+                            </div>
                         )}
-                        <p className="pt-2 text-sm text-gray-800">
+                        <p className="pt-2 text-sm color-accent">
                             {result.package.description
                                 ? result.package.description
                                 : "No description available"}
@@ -81,18 +91,29 @@ function Results({
                                 return (
                                     <div
                                         key={keyword}
-                                        className="tag rounded-lg bg-gray-300/70 p-2 text-sm"
+                                        className="tag rounded-lg p-2 text-sm bg-gray-800 text-white"
                                     >
                                         {keyword}
                                     </div>
                                 );
                             })}
                         </div>
-                        <div className="info flex items-center gap-2 text-xs text-gray-500">
-                            <p className="version">{result.package.version}</p> {"•"}
+                        <div className="info flex items-center gap-2 text-xs text-gray-300">
+                            <p className="version">
+                                <img
+                                    src={`https://img.shields.io/badge/version-${result.package.version}-white?style=for-the-badge&logo=npm&logoColor=red`}
+                                    alt="npm version"
+                                />
+                            </p>
+                            {"•"}
                             <p className="date">
-                                Last Updated :-{" "}
-                                {handleLastUpdated(new Date(result.package.date), results.time)}
+                                {}
+                                <img
+                                    src={`https://img.shields.io/badge/last_updated-${
+                                        handleLastUpdated(new Date(result.package.date), results.time)
+                                    }-white?style=for-the-badge&logo=npm&logoColor=red`}
+                                    alt="npm version"
+                                />
                             </p>
                         </div>
                         <div className="buttons mt-4 flex gap-3">

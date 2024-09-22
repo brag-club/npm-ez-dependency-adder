@@ -4,7 +4,7 @@ interface SearchBarProps {
     onSearch: (t: string) => void;
 }
 
-function SearchBar({ onSearch }: SearchBarProps) {
+function SearchBar({ onSearch }: Readonly<SearchBarProps>) {
     return (
         <div className="input flex w-full text-gray-700">
             <input

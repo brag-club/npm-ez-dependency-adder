@@ -9,7 +9,7 @@ interface DependenciesList {
     onRemove: (t: string) => () => void;
 }
 
-function DependenciesList({ dependencies, name, onRemove }: DependenciesList) {
+function DependenciesList({ dependencies, name, onRemove }: Readonly<DependenciesList>) {
     return (
         <>
             <p className="mb-2 text-lg font-semibold">{name}: </p>

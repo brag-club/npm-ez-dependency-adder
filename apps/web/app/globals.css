@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 :root {
-    --color-text: rgb(3, 3, 18);
-    --color-background: rgb(237, 237, 252);
-    --color-primary: rgb(221, 44, 44);
-    --color-secondary: rgb(255, 255, 255);
-    --color-accent: rgb(17, 218, 232);
+    --color-text: rgb(255, 255, 255);
+    --color-background: rgb(3, 3, 18);
+    --color-primary: rgb(17, 135, 232);
+    --color-secondary: rgb(221, 44, 44);
+    --color-accent: rgb(219, 208, 208);
 }
 
 * {
