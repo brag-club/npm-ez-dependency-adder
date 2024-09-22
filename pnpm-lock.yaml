@@ -64,16 +64,6 @@ importers:
         specifier: ^8.3.0
         version: 8.3.0(@swc/core@1.7.26(@swc/helpers@0.5.5))(jiti@1.21.0)(postcss@8.4.40)(typescript@5.5.4)
 
-  apps/cli/test-loc:
-    dependencies:
-      react:
-        specifier: 18.3.1
-        version: 18.3.1
-    devDependencies:
-      eslint:
-        specifier: 9.9.1
-        version: 9.9.1(jiti@1.21.0)
-
   apps/web:
     dependencies:
       '@headlessui/react':
@@ -1870,6 +1860,10 @@ packages:
 
   concat-map@0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
+
+  consola@3.2.3:
+    resolution: {integrity: sha512-I5qxpzLv+sJhTVEoLYNcTW+bThDCPsit0vLNKShZx6rLtpilNpmmeTPaeqJb9ZE9dV3DGaeby6Vuhrw38WjeyQ==}
+    engines: {node: ^14.18.0 || >=16.10.0}
 
   cookie@0.5.0:
     resolution: {integrity: sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==}
@@ -5419,6 +5413,8 @@ snapshots:
   comment-parser@1.4.0: {}
 
   concat-map@0.0.1: {}
+
+  consola@3.2.3: {}
 
   cookie@0.5.0: {}
 
