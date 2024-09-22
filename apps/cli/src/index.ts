@@ -6,7 +6,7 @@ import { version, name, description } from "../package.json";
 Clerc.create(name, description, version)
     .use(helpPlugin({
         notes: [
-            "Use https://deps.chirag.codes to quickly add deps to your project",
+            "Use https://deps.codes to quickly add deps to your project",
         ]
     }))
     .use(notFoundPlugin())
