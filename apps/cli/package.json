@@ -1,6 +1,6 @@
 {
     "name": "@nzi/nzi",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "A simple CLI tool to create a new project with dependencies selected from NPM Easy Dependency Adder",
     "license": "MIT",
     "private": false,

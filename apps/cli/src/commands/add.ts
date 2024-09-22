@@ -106,7 +106,15 @@ export const addCommand : Command = defineCommand(
             });
             
             const pm = selectedPackageManager["pm"];
-            shell.exec(`${pm} init -y`)
+            let initCommand : string = `${pm} init`
+
+            if(
+                initCommand == "npm" || initCommand == "yarn"
+            ) {
+                initCommand = initCommand + " -y"
+            }
+
+            shell.exec(initCommand)
     
             if (pm === "yarn") {
                 shell.exec("yarn add " + packages["dependencies"].join(" "));
