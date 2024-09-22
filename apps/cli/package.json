@@ -1,25 +1,40 @@
 {
-    "name": "cli",
-    "version": "1.0.0",
-    "description": "",
-    "license": "ISC",
-    "author": "",
-    "type": "module",
-    "main": "index.mts",
+    "name": "@nzi/nzi",
+    "version": "0.1.2",
+    "description": "A simple CLI tool to create a new project with dependencies selected from NPM Easy Dependency Adder",
+    "license": "MIT",
+    "private": false,
+    "files": [
+        "dist",
+        "bin",
+        "README.md"
+    ],
     "scripts": {
-        "dev": "node --no-warnings --loader @esbuild-kit/esm-loader index.mts",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "dev": "tsup --watch",
+        "build": "tsup"
+    },
+    "exports": {
+        ".": {
+            "import": "./dist/index.mjs"
+        }
+    },
+    "module": "./dist/index.mjs",
+    "bin": {
+        "nzi": "./bin/nzi.mjs"
     },
     "dependencies": {
         "chalk": "^5.3.0",
         "clerc": "^0.44.0",
         "enquirer": "^2.4.1",
+        "esbuild": "^0.24.0",
         "shelljs": "^0.8.5"
     },
     "devDependencies": {
         "@esbuild-kit/esm-loader": "^2.6.5",
+        "@swc/core": "^1.7.26",
         "@types/node": "22.5.2",
-        "@types/shelljs": "^0.8.15"
+        "@types/shelljs": "^0.8.15",
+        "tsup": "^8.3.0"
     },
     "keywords": []
 }
