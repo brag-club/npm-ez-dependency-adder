@@ -3,6 +3,7 @@
     "version": "0.1.0",
     "description": "A simple CLI tool to create a new project with dependencies selected from NPM Easy Dependency Adder",
     "license": "MIT",
+    "private": false,
     "scripts": {
         "dev": "tsup --watch",
         "build": "tsup"
