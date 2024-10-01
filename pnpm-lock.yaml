@@ -15,8 +15,8 @@ importers:
         specifier: ^1.2.5
         version: 1.2.5(@types/node@22.5.2)(eslint@9.9.1(jiti@1.21.0))(prettier@3.3.3)
       '@bravo68web/tsconfig':
-        specifier: ^1.2.4
-        version: 1.2.4(typescript@5.5.4)
+        specifier: ^1.2.5
+        version: 1.2.5(typescript@5.5.4)
       '@next/eslint-plugin-next':
         specifier: ^14.2.13
         version: 14.2.13
@@ -146,8 +146,8 @@ importers:
         specifier: ^1.2.5
         version: 1.2.5(@types/node@22.5.2)(eslint@9.9.1(jiti@1.21.0))(prettier@3.0.0)
       '@bravo68web/tsconfig':
-        specifier: ^1.2.4
-        version: 1.2.4(typescript@5.5.4)
+        specifier: ^1.2.5
+        version: 1.2.5(typescript@5.5.4)
       eslint-plugin-prettier:
         specifier: ^5.2.1
         version: 5.2.1(eslint-config-prettier@9.1.0(eslint@9.9.1(jiti@1.21.0)))(eslint@9.9.1(jiti@1.21.0))(prettier@3.0.0)
@@ -158,8 +158,8 @@ importers:
   packages/core:
     devDependencies:
       '@bravo68web/tsconfig':
-        specifier: ^1.2.4
-        version: 1.2.4(typescript@5.5.4)
+        specifier: ^1.2.5
+        version: 1.2.5(typescript@5.5.4)
       '@cloudflare/workers-types':
         specifier: ^4.20240729.0
         version: 4.20240729.0
@@ -207,8 +207,8 @@ packages:
     peerDependencies:
       prettier: 2.x || 3.x
 
-  '@bravo68web/tsconfig@1.2.4':
-    resolution: {integrity: sha512-cuoez8hUeO5Eqg1fcBsY/uhc5rpSo7OJhrh0BOcyB6Fpqm8IySuTvnAn3T1GUldL1Q19ajmvwMLp2bT91+5xLA==}
+  '@bravo68web/tsconfig@1.2.5':
+    resolution: {integrity: sha512-5Nue3QVkgmIV9Z3bbZ/JB5VnVBEsvv2ZFd3iQDyLb3F63W5TOeMwaxVVkP469x3XLVMbHpsIZ+RTMWVptzsIwg==}
     peerDependencies:
       typescript: 5.x
 
@@ -4118,7 +4118,7 @@ snapshots:
       - supports-color
       - terser
 
-  '@bravo68web/tsconfig@1.2.4(typescript@5.5.4)':
+  '@bravo68web/tsconfig@1.2.5(typescript@5.5.4)':
     dependencies:
       typescript: 5.5.4
 
