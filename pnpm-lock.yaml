@@ -161,14 +161,14 @@ importers:
         specifier: ^1.2.5
         version: 1.2.5(typescript@5.5.4)
       '@cloudflare/workers-types':
-        specifier: ^4.20240729.0
-        version: 4.20240729.0
+        specifier: ^4.20241127.0
+        version: 4.20241127.0
       typescript:
         specifier: ^5.5.4
         version: 5.5.4
       wrangler:
         specifier: 3.78.2
-        version: 3.78.2(@cloudflare/workers-types@4.20240729.0)
+        version: 3.78.2(@cloudflare/workers-types@4.20241127.0)
 
 packages:
 
@@ -288,8 +288,8 @@ packages:
     resolution: {integrity: sha512-Yk5Im7zsyKbzd7qi+DrL7ZJR9+bdZwq9BqZWS4muDIWA8MCUeSLsUC+C9u+jdwfPSi5It2AcQG4f0iwZr6jkkQ==}
     engines: {node: '>=16.7.0'}
 
-  '@cloudflare/workers-types@4.20240729.0':
-    resolution: {integrity: sha512-wfe44YQkv5T9aBr/z95P706r2/Ydg32weJYyBOhvge7FqtdY6mM7l39rybNiJrbJoyN16dd0xxyQMf23aJNC6Q==}
+  '@cloudflare/workers-types@4.20241127.0':
+    resolution: {integrity: sha512-UqlvtqV8eI0CdPR7nxlbVlE52+lcjHvGdbYXEPwisy23+39RsFV7OOy0da0moJAhqnL2OhDmWTOaKdsVcPHiJQ==}
 
   '@cspotcode/source-map-support@0.8.1':
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
@@ -3674,6 +3674,9 @@ packages:
   tslib@2.7.0:
     resolution: {integrity: sha512-gLXCKdN1/j47AiHiOkJN69hJmcbGTHI0ImLmbYLHykhgeN0jVGola9yVjFgzCUklsZQMW55o+dW7IXv3RCXDzA==}
 
+  tslib@2.8.1:
+    resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
+
   tsup@8.3.0:
     resolution: {integrity: sha512-ALscEeyS03IomcuNdFdc0YWGVIkwH1Ws7nfTbAPuoILvEV2hpGQAY72LIOjglGo4ShWpZfpBqP/jpQVCzqYQag==}
     engines: {node: '>=18'}
@@ -4196,7 +4199,7 @@ snapshots:
       mime: 3.0.0
       zod: 3.23.8
 
-  '@cloudflare/workers-types@4.20240729.0': {}
+  '@cloudflare/workers-types@4.20241127.0': {}
 
   '@cspotcode/source-map-support@0.8.1':
     dependencies:
@@ -5297,7 +5300,7 @@ snapshots:
   capnp-ts@0.7.0:
     dependencies:
       debug: 4.3.7
-      tslib: 2.7.0
+      tslib: 2.8.1
     transitivePeerDependencies:
       - supports-color
 
@@ -6888,7 +6891,7 @@ snapshots:
     dependencies:
       prettier: 2.8.8
       prettier-package-json: 2.6.0
-      tslib: 2.7.0
+      tslib: 2.8.1
     optionalDependencies:
       eslint: 9.9.1(jiti@1.21.0)
 
@@ -7328,7 +7331,7 @@ snapshots:
   synckit@0.8.8:
     dependencies:
       '@pkgr/core': 0.1.0
-      tslib: 2.7.0
+      tslib: 2.8.1
 
   synckit@0.9.1:
     dependencies:
@@ -7419,6 +7422,8 @@ snapshots:
   tslib@2.6.3: {}
 
   tslib@2.7.0: {}
+
+  tslib@2.8.1: {}
 
   tsup@8.3.0(@swc/core@1.7.26(@swc/helpers@0.5.5))(jiti@1.21.0)(postcss@8.4.40)(typescript@5.5.4):
     dependencies:
@@ -7687,7 +7692,7 @@ snapshots:
       '@cloudflare/workerd-linux-arm64': 1.20240909.0
       '@cloudflare/workerd-windows-64': 1.20240909.0
 
-  wrangler@3.78.2(@cloudflare/workers-types@4.20240729.0):
+  wrangler@3.78.2(@cloudflare/workers-types@4.20241127.0):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.3.4
       '@cloudflare/workers-shared': 0.5.3
@@ -7708,7 +7713,7 @@ snapshots:
       workerd: 1.20240909.0
       xxhash-wasm: 1.0.2
     optionalDependencies:
-      '@cloudflare/workers-types': 4.20240729.0
+      '@cloudflare/workers-types': 4.20241127.0
       fsevents: 2.3.3
     transitivePeerDependencies:
       - bufferutil
