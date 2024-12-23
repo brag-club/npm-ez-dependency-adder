@@ -67,8 +67,8 @@ importers:
   apps/web:
     dependencies:
       '@headlessui/react':
-        specifier: ^2.1.2
-        version: 2.1.2(react-dom@18.3.1(react@19.0.0))(react@19.0.0)
+        specifier: ^2.2.0
+        version: 2.2.0(react-dom@18.3.1(react@19.0.0))(react@19.0.0)
       '@heroicons/react':
         specifier: ^2.2.0
         version: 2.2.0(react@19.0.0)
@@ -1054,12 +1054,12 @@ packages:
   '@floating-ui/utils@0.2.5':
     resolution: {integrity: sha512-sTcG+QZ6fdEUObICavU+aB3Mp8HY4n14wYHdxK4fXjPmv3PXZZeY5RaguJmGyeH/CJQhX3fqKUtS4qc1LoHwhQ==}
 
-  '@headlessui/react@2.1.2':
-    resolution: {integrity: sha512-Kb3hgk9gRNRcTZktBrKdHhF3xFhYkca1Rk6e1/im2ENf83dgN54orMW0uSKTXFnUpZOUFZ+wcY05LlipwgZIFQ==}
+  '@headlessui/react@2.2.0':
+    resolution: {integrity: sha512-RzCEg+LXsuI7mHiSomsu/gBJSjpupm6A1qIZ5sWjd7JhARNlMiSA4kKfJpCKwU9tE+zMRterhhrP74PvfJrpXQ==}
     engines: {node: '>=10'}
     peerDependencies:
-      react: ^18
-      react-dom: ^18
+      react: ^18 || ^19 || ^19.0.0-rc
+      react-dom: ^18 || ^19 || ^19.0.0-rc
 
   '@heroicons/react@2.2.0':
     resolution: {integrity: sha512-LMcepvRaS9LYHJGsF0zzmgKCUim/X3N/DQKc4jepAXJ7l8QxJ1PmxJzqplF2Z3FE4PqBAIGyJAQ/w4B5dsqbtQ==}
@@ -4924,7 +4924,7 @@ snapshots:
 
   '@floating-ui/utils@0.2.5': {}
 
-  '@headlessui/react@2.1.2(react-dom@18.3.1(react@19.0.0))(react@19.0.0)':
+  '@headlessui/react@2.2.0(react-dom@18.3.1(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@floating-ui/react': 0.26.20(react-dom@18.3.1(react@19.0.0))(react@19.0.0)
       '@react-aria/focus': 3.18.1(react@19.0.0)
