@@ -4,7 +4,7 @@
   "devDependencies": {
     "@bravo68web/tsconfig": "^1.2.5",
     "@cloudflare/workers-types": "^4.20241205.0",
-    "typescript": "^5.7.2",
+    "typescript": "^5.8.2",
     "wrangler": "3.78.2"
   },
   "private": true,
