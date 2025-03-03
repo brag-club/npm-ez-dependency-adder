@@ -32,7 +32,7 @@
     "devDependencies": {
         "@esbuild-kit/esm-loader": "^2.6.5",
         "@swc/core": "^1.7.26",
-        "@types/node": "22.7.4",
+        "@types/node": "22.13.8",
         "@types/shelljs": "^0.8.15",
         "tsup": "^8.3.0"
     },
