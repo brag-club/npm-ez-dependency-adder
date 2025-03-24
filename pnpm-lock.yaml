@@ -13,7 +13,7 @@ importers:
         version: 1.2.3(eslint@9.9.1(jiti@1.21.7))(prettier@3.3.3)(tailwindcss@3.4.17)(typescript@5.7.2)
       '@bravo68web/prettier-config':
         specifier: ^1.2.5
-        version: 1.2.5(@types/node@22.7.4)(eslint@9.9.1(jiti@1.21.7))(prettier@3.3.3)
+        version: 1.2.5(@types/node@22.13.13)(eslint@9.9.1(jiti@1.21.7))(prettier@3.3.3)
       '@bravo68web/tsconfig':
         specifier: ^1.2.5
         version: 1.2.5(typescript@5.7.2)
@@ -55,8 +55,8 @@ importers:
         specifier: ^1.7.26
         version: 1.7.26(@swc/helpers@0.5.5)
       '@types/node':
-        specifier: 22.7.4
-        version: 22.7.4
+        specifier: 22.13.13
+        version: 22.13.13
       '@types/shelljs':
         specifier: ^0.8.15
         version: 0.8.15
@@ -79,8 +79,8 @@ importers:
         specifier: ^0.5.9
         version: 0.5.9(tailwindcss@3.4.17)
       '@types/node':
-        specifier: 22.7.4
-        version: 22.7.4
+        specifier: 22.13.13
+        version: 22.13.13
       '@types/react':
         specifier: 19.0.1
         version: 19.0.1
@@ -144,7 +144,7 @@ importers:
         version: 1.2.3(eslint@9.9.1(jiti@1.21.7))(prettier@3.0.0)(tailwindcss@3.4.17)(typescript@5.7.2)
       '@bravo68web/prettier-config':
         specifier: ^1.2.5
-        version: 1.2.5(@types/node@22.7.4)(eslint@9.9.1(jiti@1.21.7))(prettier@3.0.0)
+        version: 1.2.5(@types/node@22.13.13)(eslint@9.9.1(jiti@1.21.7))(prettier@3.0.0)
       '@bravo68web/tsconfig':
         specifier: ^1.2.5
         version: 1.2.5(typescript@5.7.2)
@@ -1489,8 +1489,8 @@ packages:
   '@types/node-forge@1.3.10':
     resolution: {integrity: sha512-y6PJDYN4xYBxwd22l+OVH35N+1fCYWiuC3aiP2SlXVE6Lo7SS+rSx9r89hLxrP4pn6n1lBGhHJ12pj3F3Mpttw==}
 
-  '@types/node@22.7.4':
-    resolution: {integrity: sha512-y+NPi1rFzDs1NdQHHToqeiX2TIS79SWEAw9GYhkkx8bD0ChpfqC+n2j5OXOCpzfojBEBt6DnEnnG9MY0zk1XLg==}
+  '@types/node@22.13.13':
+    resolution: {integrity: sha512-ClsL5nMwKaBRwPcCvH8E7+nU4GxHVx1axNvMZTFHMEfNI7oahimt26P5zjVCRrjiIWj6YFXfE1v3dEp94wLcGQ==}
 
   '@types/normalize-package-data@2.4.2':
     resolution: {integrity: sha512-lqa4UEhhv/2sjjIQgjX8B+RBjj47eo0mzGasklVJ78UKGQY1r0VpB9XHDaZZO9qzEFDdy4MrXLuEaSmPrPSe/A==}
@@ -3177,8 +3177,8 @@ packages:
     resolution: {integrity: sha512-yBYjY9QX2hnRmZHAjG/f13MzmBzxzYgQhFrke06TTyKY5zSTEqkOeukBzIdVA3j3ulu8Qa3MbVFShV7T2RmGtQ==}
     engines: {node: '>= 0.4'}
 
-  ohash@1.1.4:
-    resolution: {integrity: sha512-FlDryZAahJmEF3VR3w1KogSEdWX3WhA5GPakFx4J81kEAiHyLMpdLLElS8n8dfNadMgAne/MywcvmogzscVt4g==}
+  ohash@1.1.6:
+    resolution: {integrity: sha512-TBu7PtV8YkAZn0tSxobKY2n2aAQva936lhRrj6957aDaCf9IEtqsKbgMzXE/F/sjqYOwmrukeORHNLe5glk7Cg==}
 
   once@1.4.0:
     resolution: {integrity: sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w==}
@@ -4074,8 +4074,8 @@ packages:
   unbox-primitive@1.0.2:
     resolution: {integrity: sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw==}
 
-  undici-types@6.19.8:
-    resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
+  undici-types@6.20.0:
+    resolution: {integrity: sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg==}
 
   undici@5.28.4:
     resolution: {integrity: sha512-72RFADWFqKmUb2hmmvNODKL3p9hcB6Gt2DOQMis1SEBaV6a4MH8soBvzg+95CYhCKPFedut2JY9bMfrDl9D23g==}
@@ -4349,14 +4349,14 @@ snapshots:
       - supports-color
       - tailwindcss
 
-  '@bravo68web/prettier-config@1.2.5(@types/node@22.7.4)(eslint@9.9.1(jiti@1.21.7))(prettier@3.0.0)':
+  '@bravo68web/prettier-config@1.2.5(@types/node@22.13.13)(eslint@9.9.1(jiti@1.21.7))(prettier@3.0.0)':
     dependencies:
       prettier: 3.0.0
       prettier-plugin-package-perfection: 1.1.0(eslint@9.9.1(jiti@1.21.7))
       prettier-plugin-prisma: 5.0.0(prettier@3.0.0)
       prettier-plugin-sort-json: 3.1.0(prettier@3.0.0)
       prettier-plugin-tailwindcss: 0.5.9(prettier@3.0.0)
-      vitest: 1.0.1(@types/node@22.7.4)
+      vitest: 1.0.1(@types/node@22.13.13)
     transitivePeerDependencies:
       - '@edge-runtime/vm'
       - '@ianvs/prettier-plugin-sort-imports'
@@ -4387,14 +4387,14 @@ snapshots:
       - supports-color
       - terser
 
-  '@bravo68web/prettier-config@1.2.5(@types/node@22.7.4)(eslint@9.9.1(jiti@1.21.7))(prettier@3.3.3)':
+  '@bravo68web/prettier-config@1.2.5(@types/node@22.13.13)(eslint@9.9.1(jiti@1.21.7))(prettier@3.3.3)':
     dependencies:
       prettier: 3.3.3
       prettier-plugin-package-perfection: 1.1.0(eslint@9.9.1(jiti@1.21.7))
       prettier-plugin-prisma: 5.0.0(prettier@3.3.3)
       prettier-plugin-sort-json: 3.1.0(prettier@3.3.3)
       prettier-plugin-tailwindcss: 0.5.9(prettier@3.3.3)
-      vitest: 1.0.1(@types/node@22.7.4)
+      vitest: 1.0.1(@types/node@22.13.13)
     transitivePeerDependencies:
       - '@edge-runtime/vm'
       - '@ianvs/prettier-plugin-sort-imports'
@@ -5253,7 +5253,7 @@ snapshots:
   '@types/glob@7.2.0':
     dependencies:
       '@types/minimatch': 5.1.2
-      '@types/node': 22.7.4
+      '@types/node': 22.13.13
 
   '@types/json-schema@7.0.15': {}
 
@@ -5263,11 +5263,11 @@ snapshots:
 
   '@types/node-forge@1.3.10':
     dependencies:
-      '@types/node': 22.7.4
+      '@types/node': 22.13.13
 
-  '@types/node@22.7.4':
+  '@types/node@22.13.13':
     dependencies:
-      undici-types: 6.19.8
+      undici-types: 6.20.0
 
   '@types/normalize-package-data@2.4.2': {}
 
@@ -5286,7 +5286,7 @@ snapshots:
   '@types/shelljs@0.8.15':
     dependencies:
       '@types/glob': 7.2.0
-      '@types/node': 22.7.4
+      '@types/node': 22.13.13
 
   '@types/text-table@0.2.5': {}
 
@@ -7369,7 +7369,7 @@ snapshots:
       define-properties: 1.2.1
       es-object-atoms: 1.0.0
 
-  ohash@1.1.4: {}
+  ohash@1.1.6: {}
 
   once@1.4.0:
     dependencies:
@@ -8309,7 +8309,7 @@ snapshots:
       has-symbols: 1.1.0
       which-boxed-primitive: 1.0.2
 
-  undici-types@6.19.8: {}
+  undici-types@6.20.0: {}
 
   undici@5.28.4:
     dependencies:
@@ -8318,7 +8318,7 @@ snapshots:
   unenv-nightly@2.0.0-1724863496.70db6f1:
     dependencies:
       defu: 6.1.4
-      ohash: 1.1.4
+      ohash: 1.1.6
       pathe: 1.1.2
       ufo: 1.5.4
 
@@ -8341,13 +8341,13 @@ snapshots:
       spdx-correct: 3.2.0
       spdx-expression-parse: 3.0.1
 
-  vite-node@1.0.1(@types/node@22.7.4):
+  vite-node@1.0.1(@types/node@22.13.13):
     dependencies:
       cac: 6.7.14
       debug: 4.3.7
       pathe: 1.1.2
       picocolors: 1.1.1
-      vite: 5.0.12(@types/node@22.7.4)
+      vite: 5.0.12(@types/node@22.13.13)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -8358,16 +8358,16 @@ snapshots:
       - supports-color
       - terser
 
-  vite@5.0.12(@types/node@22.7.4):
+  vite@5.0.12(@types/node@22.13.13):
     dependencies:
       esbuild: 0.19.11
       postcss: 8.4.49
       rollup: 4.9.6
     optionalDependencies:
-      '@types/node': 22.7.4
+      '@types/node': 22.13.13
       fsevents: 2.3.3
 
-  vitest@1.0.1(@types/node@22.7.4):
+  vitest@1.0.1(@types/node@22.13.13):
     dependencies:
       '@vitest/expect': 1.0.1
       '@vitest/runner': 1.0.1
@@ -8387,11 +8387,11 @@ snapshots:
       strip-literal: 1.3.0
       tinybench: 2.5.1
       tinypool: 0.8.2
-      vite: 5.0.12(@types/node@22.7.4)
-      vite-node: 1.0.1(@types/node@22.7.4)
+      vite: 5.0.12(@types/node@22.13.13)
+      vite-node: 1.0.1(@types/node@22.13.13)
       why-is-node-running: 2.2.2
     optionalDependencies:
-      '@types/node': 22.7.4
+      '@types/node': 22.13.13
     transitivePeerDependencies:
       - less
       - lightningcss
