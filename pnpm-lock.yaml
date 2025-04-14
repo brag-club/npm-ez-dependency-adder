@@ -21,8 +21,8 @@ importers:
         specifier: ^14.2.13
         version: 14.2.13
       eslint-plugin-prettier:
-        specifier: ^5.2.1
-        version: 5.2.1(eslint-config-prettier@9.1.0(eslint@9.9.1(jiti@1.21.7)))(eslint@9.9.1(jiti@1.21.7))(prettier@3.3.3)
+        specifier: ^5.2.6
+        version: 5.2.6(eslint-config-prettier@9.1.0(eslint@9.9.1(jiti@1.21.7)))(eslint@9.9.1(jiti@1.21.7))(prettier@3.3.3)
       prettier:
         specifier: '3'
         version: 3.3.3
@@ -149,8 +149,8 @@ importers:
         specifier: ^1.2.5
         version: 1.2.5(typescript@5.8.3)
       eslint-plugin-prettier:
-        specifier: ^5.2.1
-        version: 5.2.1(eslint-config-prettier@9.1.0(eslint@9.9.1(jiti@1.21.7)))(eslint@9.9.1(jiti@1.21.7))(prettier@3.0.0)
+        specifier: ^5.2.6
+        version: 5.2.6(eslint-config-prettier@9.1.0(eslint@9.9.1(jiti@1.21.7)))(eslint@9.9.1(jiti@1.21.7))(prettier@3.0.0)
       prettier:
         specifier: '3'
         version: 3.0.0
@@ -1187,8 +1187,12 @@ packages:
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
 
-  '@pkgr/core@0.1.0':
-    resolution: {integrity: sha512-Zwq5OCzuwJC2jwqmpEQt7Ds1DTi6BWSwoGkbb1n9pO3hzb35BoJELx7c0T23iDkBGkh2e7tvOtjF3tr3OaQHDQ==}
+  '@pkgr/core@0.1.2':
+    resolution: {integrity: sha512-fdDH1LSGfZdTH2sxdpVMw31BanV28K/Gry0cVFxaNP77neJSkd82mM8ErPNYs9e+0O7SdHBLTDzDgwUuy18RnQ==}
+    engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
+
+  '@pkgr/core@0.2.2':
+    resolution: {integrity: sha512-25L86MyPvnlQoX2MTIV2OiUcb6vJ6aRbFa9pbwByn95INKD5mFH2smgjDhq+fwJoqAgvgbdJLj6Tz7V9X5CFAQ==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
 
   '@prisma/prisma-schema-wasm@4.17.0-26.6b0aef69b7cdfc787f822ecd7cdc76d5f1991584':
@@ -2249,13 +2253,13 @@ packages:
       eslint-config-prettier:
         optional: true
 
-  eslint-plugin-prettier@5.2.1:
-    resolution: {integrity: sha512-gH3iR3g4JfF+yYPaJYkN7jEl9QbweL/YfkoRlNnuIEHEz1vHVlCmWOS+eGGiRuzHQXdJFCOTxRgvju9b8VUmrw==}
+  eslint-plugin-prettier@5.2.6:
+    resolution: {integrity: sha512-mUcf7QG2Tjk7H055Jk0lGBjbgDnfrvqjhXh9t2xLMSCjZVcw9Rb1V6sVNXO0th3jgeO7zllWPTNRil3JW94TnQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       '@types/eslint': '>=8.0.0'
       eslint: '>=8.0.0'
-      eslint-config-prettier: '*'
+      eslint-config-prettier: '>= 7.0.0 <10.0.0 || >=10.1.0'
       prettier: '>=3.0.0'
     peerDependenciesMeta:
       '@types/eslint':
@@ -3863,12 +3867,12 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  synckit@0.8.8:
-    resolution: {integrity: sha512-HwOKAP7Wc5aRGYdKH+dw0PRRpbO841v2DENBtjnR5HFWoiNByAl7vrx3p0G/rCyYXQsrxqtX48TImFtPcIHSpQ==}
+  synckit@0.11.3:
+    resolution: {integrity: sha512-szhWDqNNI9etJUvbZ1/cx1StnZx8yMmFxme48SwR4dty4ioSY50KEZlpv0qAfgc1fpRzuh9hBXEzoCpJ779dLg==}
     engines: {node: ^14.18.0 || >=16.0.0}
 
-  synckit@0.9.1:
-    resolution: {integrity: sha512-7gr8p9TQP6RAHusBOSLs46F4564ZrjV8xFmw5zCmgmhGUcw2hxsShhJ6CEiHQMgPDwAQ1fWHPM0ypc4RMAig4A==}
+  synckit@0.8.8:
+    resolution: {integrity: sha512-HwOKAP7Wc5aRGYdKH+dw0PRRpbO841v2DENBtjnR5HFWoiNByAl7vrx3p0G/rCyYXQsrxqtX48TImFtPcIHSpQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
 
   tabbable@6.2.0:
@@ -3939,9 +3943,6 @@ packages:
 
   tslib@2.6.2:
     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
-
-  tslib@2.6.3:
-    resolution: {integrity: sha512-xNvxJEOUiWPGhUuUdQgAJPKOOJfGnIyKySOc09XkKsgdUV/3E2zvwZYdejjmRgPCgcym1juLH3226yA7sEFJKQ==}
 
   tslib@2.7.0:
     resolution: {integrity: sha512-gLXCKdN1/j47AiHiOkJN69hJmcbGTHI0ImLmbYLHykhgeN0jVGola9yVjFgzCUklsZQMW55o+dW7IXv3RCXDzA==}
@@ -4067,8 +4068,8 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
-  ufo@1.5.4:
-    resolution: {integrity: sha512-UsUk3byDzKd04EyoZ7U4DOlxQaD14JUKQl6/P7wiX4FNvUfm3XL246n9W5AmqwW5RSFJ27NAuM0iLscAOYUiGQ==}
+  ufo@1.6.1:
+    resolution: {integrity: sha512-9a4/uxlTWJ4+a5i0ooc1rU7C7YOw3wT+UGqdeNNHWnOF9qcMBgLRS+4IYUqbczewFx4mLEig6gawh7X6mFlEkA==}
 
   unbox-primitive@1.0.2:
     resolution: {integrity: sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw==}
@@ -5040,7 +5041,9 @@ snapshots:
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
-  '@pkgr/core@0.1.0': {}
+  '@pkgr/core@0.1.2': {}
+
+  '@pkgr/core@0.2.2': {}
 
   '@prisma/prisma-schema-wasm@4.17.0-26.6b0aef69b7cdfc787f822ecd7cdc76d5f1991584': {}
 
@@ -6379,21 +6382,21 @@ snapshots:
     optionalDependencies:
       eslint-config-prettier: 9.1.0(eslint@9.9.1(jiti@1.21.7))
 
-  eslint-plugin-prettier@5.2.1(eslint-config-prettier@9.1.0(eslint@9.9.1(jiti@1.21.7)))(eslint@9.9.1(jiti@1.21.7))(prettier@3.0.0):
+  eslint-plugin-prettier@5.2.6(eslint-config-prettier@9.1.0(eslint@9.9.1(jiti@1.21.7)))(eslint@9.9.1(jiti@1.21.7))(prettier@3.0.0):
     dependencies:
       eslint: 9.9.1(jiti@1.21.7)
       prettier: 3.0.0
       prettier-linter-helpers: 1.0.0
-      synckit: 0.9.1
+      synckit: 0.11.3
     optionalDependencies:
       eslint-config-prettier: 9.1.0(eslint@9.9.1(jiti@1.21.7))
 
-  eslint-plugin-prettier@5.2.1(eslint-config-prettier@9.1.0(eslint@9.9.1(jiti@1.21.7)))(eslint@9.9.1(jiti@1.21.7))(prettier@3.3.3):
+  eslint-plugin-prettier@5.2.6(eslint-config-prettier@9.1.0(eslint@9.9.1(jiti@1.21.7)))(eslint@9.9.1(jiti@1.21.7))(prettier@3.3.3):
     dependencies:
       eslint: 9.9.1(jiti@1.21.7)
       prettier: 3.3.3
       prettier-linter-helpers: 1.0.0
-      synckit: 0.9.1
+      synckit: 0.11.3
     optionalDependencies:
       eslint-config-prettier: 9.1.0(eslint@9.9.1(jiti@1.21.7))
 
@@ -7238,7 +7241,7 @@ snapshots:
       acorn: 8.12.1
       pathe: 1.1.2
       pkg-types: 1.0.3
-      ufo: 1.5.4
+      ufo: 1.6.1
 
   ms@2.1.2: {}
 
@@ -8067,15 +8070,15 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  synckit@0.8.8:
+  synckit@0.11.3:
     dependencies:
-      '@pkgr/core': 0.1.0
+      '@pkgr/core': 0.2.2
       tslib: 2.8.1
 
-  synckit@0.9.1:
+  synckit@0.8.8:
     dependencies:
-      '@pkgr/core': 0.1.0
-      tslib: 2.6.3
+      '@pkgr/core': 0.1.2
+      tslib: 2.8.1
 
   tabbable@6.2.0: {}
 
@@ -8157,8 +8160,6 @@ snapshots:
   tslib@1.14.1: {}
 
   tslib@2.6.2: {}
-
-  tslib@2.6.3: {}
 
   tslib@2.7.0: {}
 
@@ -8300,7 +8301,7 @@ snapshots:
 
   typescript@5.8.3: {}
 
-  ufo@1.5.4: {}
+  ufo@1.6.1: {}
 
   unbox-primitive@1.0.2:
     dependencies:
@@ -8320,7 +8321,7 @@ snapshots:
       defu: 6.1.4
       ohash: 1.1.6
       pathe: 1.1.2
-      ufo: 1.5.4
+      ufo: 1.6.1
 
   universalify@2.0.0: {}
 
