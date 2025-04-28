@@ -17,7 +17,7 @@
     "@next/eslint-plugin-next": "^14.2.13",
     "eslint-plugin-prettier": "^5.2.1",
     "prettier": "3",
-    "turbo": "^2.1.1"
+    "turbo": "^2.5.2"
   },
   "prettier": "@bravo68web/prettier-config"
 }
