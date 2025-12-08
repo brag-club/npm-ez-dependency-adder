@@ -10,10 +10,10 @@ importers:
     devDependencies:
       '@bravo68web/eslint-config':
         specifier: ^1.2.3
-        version: 1.2.3(eslint@9.9.1(jiti@1.21.7))(prettier@3.3.3)(tailwindcss@3.4.17)(typescript@5.8.3)
+        version: 1.2.3(eslint@9.9.1(jiti@1.21.7))(prettier@3.7.4)(tailwindcss@3.4.17)(typescript@5.8.3)
       '@bravo68web/prettier-config':
         specifier: ^1.2.5
-        version: 1.2.5(@types/node@22.13.14)(eslint@9.9.1(jiti@1.21.7))(prettier@3.3.3)
+        version: 1.2.5(@types/node@22.13.14)(eslint@9.9.1(jiti@1.21.7))(prettier@3.7.4)
       '@bravo68web/tsconfig':
         specifier: ^1.2.5
         version: 1.2.5(typescript@5.8.3)
@@ -22,10 +22,10 @@ importers:
         version: 14.2.13
       eslint-plugin-prettier:
         specifier: ^5.5.4
-        version: 5.5.4(eslint-config-prettier@9.1.0(eslint@9.9.1(jiti@1.21.7)))(eslint@9.9.1(jiti@1.21.7))(prettier@3.3.3)
+        version: 5.5.4(eslint-config-prettier@9.1.0(eslint@9.9.1(jiti@1.21.7)))(eslint@9.9.1(jiti@1.21.7))(prettier@3.7.4)
       prettier:
         specifier: '3'
-        version: 3.3.3
+        version: 3.7.4
       turbo:
         specifier: ^2.5.8
         version: 2.5.8
@@ -141,19 +141,19 @@ importers:
     devDependencies:
       '@bravo68web/eslint-config':
         specifier: ^1.2.3
-        version: 1.2.3(eslint@9.9.1(jiti@1.21.7))(prettier@3.0.0)(tailwindcss@3.4.17)(typescript@5.8.3)
+        version: 1.2.3(eslint@9.9.1(jiti@1.21.7))(prettier@3.7.4)(tailwindcss@3.4.17)(typescript@5.8.3)
       '@bravo68web/prettier-config':
         specifier: ^1.2.5
-        version: 1.2.5(@types/node@22.13.14)(eslint@9.9.1(jiti@1.21.7))(prettier@3.0.0)
+        version: 1.2.5(@types/node@22.13.14)(eslint@9.9.1(jiti@1.21.7))(prettier@3.7.4)
       '@bravo68web/tsconfig':
         specifier: ^1.2.5
         version: 1.2.5(typescript@5.8.3)
       eslint-plugin-prettier:
         specifier: ^5.5.4
-        version: 5.5.4(eslint-config-prettier@9.1.0(eslint@9.9.1(jiti@1.21.7)))(eslint@9.9.1(jiti@1.21.7))(prettier@3.0.0)
+        version: 5.5.4(eslint-config-prettier@9.1.0(eslint@9.9.1(jiti@1.21.7)))(eslint@9.9.1(jiti@1.21.7))(prettier@3.7.4)
       prettier:
         specifier: '3'
-        version: 3.0.0
+        version: 3.7.4
 
   packages/core:
     devDependencies:
@@ -3588,13 +3588,8 @@ packages:
     engines: {node: '>=10.13.0'}
     hasBin: true
 
-  prettier@3.0.0:
-    resolution: {integrity: sha512-zBf5eHpwHOGPC47h0zrPyNn+eAEIdEzfywMoYn2XPi0P44Zp0tSq64rq0xAREh4auw2cJZHo9QUob+NqCQky4g==}
-    engines: {node: '>=14'}
-    hasBin: true
-
-  prettier@3.3.3:
-    resolution: {integrity: sha512-i2tDNA0O5IrMO757lfrdQZCc2jPNDVntV0m/+4whiDfWaTKfMNgR7Qz0NAeGz/nRqF4m5/6CLzbP4/liHt12Ew==}
+  prettier@3.7.4:
+    resolution: {integrity: sha512-v6UNi1+3hSlVvv8fSaoUbggEM5VErKmmpGA7Pl3HF8V6uKY7rvClBOJlH6yNwQtfTueNkGVpOv/mtWL9L4bgRA==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -4423,7 +4418,7 @@ snapshots:
     dependencies:
       regenerator-runtime: 0.14.0
 
-  '@bravo68web/eslint-config@1.2.3(eslint@9.9.1(jiti@1.21.7))(prettier@3.0.0)(tailwindcss@3.4.17)(typescript@5.8.3)':
+  '@bravo68web/eslint-config@1.2.3(eslint@9.9.1(jiti@1.21.7))(prettier@3.7.4)(tailwindcss@3.4.17)(typescript@5.8.3)':
     dependencies:
       '@typescript-eslint/eslint-plugin': 6.13.2(@typescript-eslint/parser@6.13.2(eslint@9.9.1(jiti@1.21.7))(typescript@5.8.3))(eslint@9.9.1(jiti@1.21.7))(typescript@5.8.3)
       '@typescript-eslint/parser': 6.13.2(eslint@9.9.1(jiti@1.21.7))(typescript@5.8.3)
@@ -4433,7 +4428,7 @@ snapshots:
       eslint-plugin-autofix: 1.1.0(eslint@9.9.1(jiti@1.21.7))
       eslint-plugin-deprecation: 2.0.0(eslint@9.9.1(jiti@1.21.7))(typescript@5.8.3)
       eslint-plugin-jsx-a11y: 6.8.0(eslint@9.9.1(jiti@1.21.7))
-      eslint-plugin-prettier: 5.0.1(eslint-config-prettier@9.1.0(eslint@9.9.1(jiti@1.21.7)))(eslint@9.9.1(jiti@1.21.7))(prettier@3.0.0)
+      eslint-plugin-prettier: 5.0.1(eslint-config-prettier@9.1.0(eslint@9.9.1(jiti@1.21.7)))(eslint@9.9.1(jiti@1.21.7))(prettier@3.7.4)
       eslint-plugin-promise: 6.1.1(eslint@9.9.1(jiti@1.21.7))
       eslint-plugin-react: 7.33.2(eslint@9.9.1(jiti@1.21.7))
       eslint-plugin-regexp: 2.1.2(eslint@9.9.1(jiti@1.21.7))
@@ -4449,77 +4444,13 @@ snapshots:
       - supports-color
       - tailwindcss
 
-  '@bravo68web/eslint-config@1.2.3(eslint@9.9.1(jiti@1.21.7))(prettier@3.3.3)(tailwindcss@3.4.17)(typescript@5.8.3)':
+  '@bravo68web/prettier-config@1.2.5(@types/node@22.13.14)(eslint@9.9.1(jiti@1.21.7))(prettier@3.7.4)':
     dependencies:
-      '@typescript-eslint/eslint-plugin': 6.13.2(@typescript-eslint/parser@6.13.2(eslint@9.9.1(jiti@1.21.7))(typescript@5.8.3))(eslint@9.9.1(jiti@1.21.7))(typescript@5.8.3)
-      '@typescript-eslint/parser': 6.13.2(eslint@9.9.1(jiti@1.21.7))(typescript@5.8.3)
-      deepmerge: 4.3.1
-      eslint: 9.9.1(jiti@1.21.7)
-      eslint-config-prettier: 9.1.0(eslint@9.9.1(jiti@1.21.7))
-      eslint-plugin-autofix: 1.1.0(eslint@9.9.1(jiti@1.21.7))
-      eslint-plugin-deprecation: 2.0.0(eslint@9.9.1(jiti@1.21.7))(typescript@5.8.3)
-      eslint-plugin-jsx-a11y: 6.8.0(eslint@9.9.1(jiti@1.21.7))
-      eslint-plugin-prettier: 5.0.1(eslint-config-prettier@9.1.0(eslint@9.9.1(jiti@1.21.7)))(eslint@9.9.1(jiti@1.21.7))(prettier@3.3.3)
-      eslint-plugin-promise: 6.1.1(eslint@9.9.1(jiti@1.21.7))
-      eslint-plugin-react: 7.33.2(eslint@9.9.1(jiti@1.21.7))
-      eslint-plugin-regexp: 2.1.2(eslint@9.9.1(jiti@1.21.7))
-      eslint-plugin-security: 1.7.1
-      eslint-plugin-simple-import-sort: 10.0.0(eslint@9.9.1(jiti@1.21.7))
-      eslint-plugin-sonarjs: 0.23.0(eslint@9.9.1(jiti@1.21.7))
-      eslint-plugin-tailwindcss: 3.13.0(tailwindcss@3.4.17)
-      eslint-plugin-unicorn: 49.0.0(eslint@9.9.1(jiti@1.21.7))
-      typescript: 5.8.3
-    transitivePeerDependencies:
-      - '@types/eslint'
-      - prettier
-      - supports-color
-      - tailwindcss
-
-  '@bravo68web/prettier-config@1.2.5(@types/node@22.13.14)(eslint@9.9.1(jiti@1.21.7))(prettier@3.0.0)':
-    dependencies:
-      prettier: 3.0.0
+      prettier: 3.7.4
       prettier-plugin-package-perfection: 1.1.0(eslint@9.9.1(jiti@1.21.7))
-      prettier-plugin-prisma: 5.0.0(prettier@3.0.0)
-      prettier-plugin-sort-json: 3.1.0(prettier@3.0.0)
-      prettier-plugin-tailwindcss: 0.5.9(prettier@3.0.0)
-      vitest: 1.0.1(@types/node@22.13.14)
-    transitivePeerDependencies:
-      - '@edge-runtime/vm'
-      - '@ianvs/prettier-plugin-sort-imports'
-      - '@prettier/plugin-pug'
-      - '@shopify/prettier-plugin-liquid'
-      - '@trivago/prettier-plugin-sort-imports'
-      - '@types/node'
-      - '@vitest/browser'
-      - '@vitest/ui'
-      - eslint
-      - happy-dom
-      - jsdom
-      - less
-      - lightningcss
-      - prettier-plugin-astro
-      - prettier-plugin-css-order
-      - prettier-plugin-import-sort
-      - prettier-plugin-jsdoc
-      - prettier-plugin-marko
-      - prettier-plugin-organize-attributes
-      - prettier-plugin-organize-imports
-      - prettier-plugin-style-order
-      - prettier-plugin-svelte
-      - prettier-plugin-twig-melody
-      - sass
-      - stylus
-      - sugarss
-      - supports-color
-      - terser
-
-  '@bravo68web/prettier-config@1.2.5(@types/node@22.13.14)(eslint@9.9.1(jiti@1.21.7))(prettier@3.3.3)':
-    dependencies:
-      prettier: 3.3.3
-      prettier-plugin-package-perfection: 1.1.0(eslint@9.9.1(jiti@1.21.7))
-      prettier-plugin-prisma: 5.0.0(prettier@3.3.3)
-      prettier-plugin-sort-json: 3.1.0(prettier@3.3.3)
-      prettier-plugin-tailwindcss: 0.5.9(prettier@3.3.3)
+      prettier-plugin-prisma: 5.0.0(prettier@3.7.4)
+      prettier-plugin-sort-json: 3.1.0(prettier@3.7.4)
+      prettier-plugin-tailwindcss: 0.5.9(prettier@3.7.4)
       vitest: 1.0.1(@types/node@22.13.14)
     transitivePeerDependencies:
       - '@edge-runtime/vm'
@@ -6568,37 +6499,19 @@ snapshots:
       object.entries: 1.1.7
       object.fromentries: 2.0.7
 
-  eslint-plugin-prettier@5.0.1(eslint-config-prettier@9.1.0(eslint@9.9.1(jiti@1.21.7)))(eslint@9.9.1(jiti@1.21.7))(prettier@3.0.0):
+  eslint-plugin-prettier@5.0.1(eslint-config-prettier@9.1.0(eslint@9.9.1(jiti@1.21.7)))(eslint@9.9.1(jiti@1.21.7))(prettier@3.7.4):
     dependencies:
       eslint: 9.9.1(jiti@1.21.7)
-      prettier: 3.0.0
+      prettier: 3.7.4
       prettier-linter-helpers: 1.0.0
       synckit: 0.8.8
     optionalDependencies:
       eslint-config-prettier: 9.1.0(eslint@9.9.1(jiti@1.21.7))
 
-  eslint-plugin-prettier@5.0.1(eslint-config-prettier@9.1.0(eslint@9.9.1(jiti@1.21.7)))(eslint@9.9.1(jiti@1.21.7))(prettier@3.3.3):
+  eslint-plugin-prettier@5.5.4(eslint-config-prettier@9.1.0(eslint@9.9.1(jiti@1.21.7)))(eslint@9.9.1(jiti@1.21.7))(prettier@3.7.4):
     dependencies:
       eslint: 9.9.1(jiti@1.21.7)
-      prettier: 3.3.3
-      prettier-linter-helpers: 1.0.0
-      synckit: 0.8.8
-    optionalDependencies:
-      eslint-config-prettier: 9.1.0(eslint@9.9.1(jiti@1.21.7))
-
-  eslint-plugin-prettier@5.5.4(eslint-config-prettier@9.1.0(eslint@9.9.1(jiti@1.21.7)))(eslint@9.9.1(jiti@1.21.7))(prettier@3.0.0):
-    dependencies:
-      eslint: 9.9.1(jiti@1.21.7)
-      prettier: 3.0.0
-      prettier-linter-helpers: 1.0.0
-      synckit: 0.11.11
-    optionalDependencies:
-      eslint-config-prettier: 9.1.0(eslint@9.9.1(jiti@1.21.7))
-
-  eslint-plugin-prettier@5.5.4(eslint-config-prettier@9.1.0(eslint@9.9.1(jiti@1.21.7)))(eslint@9.9.1(jiti@1.21.7))(prettier@3.3.3):
-    dependencies:
-      eslint: 9.9.1(jiti@1.21.7)
-      prettier: 3.3.3
+      prettier: 3.7.4
       prettier-linter-helpers: 1.0.0
       synckit: 0.11.11
     optionalDependencies:
@@ -7754,37 +7667,22 @@ snapshots:
     optionalDependencies:
       eslint: 9.9.1(jiti@1.21.7)
 
-  prettier-plugin-prisma@5.0.0(prettier@3.0.0):
+  prettier-plugin-prisma@5.0.0(prettier@3.7.4):
     dependencies:
       '@prisma/prisma-schema-wasm': 4.17.0-26.6b0aef69b7cdfc787f822ecd7cdc76d5f1991584
-      prettier: 3.0.0
+      prettier: 3.7.4
 
-  prettier-plugin-prisma@5.0.0(prettier@3.3.3):
+  prettier-plugin-sort-json@3.1.0(prettier@3.7.4):
     dependencies:
-      '@prisma/prisma-schema-wasm': 4.17.0-26.6b0aef69b7cdfc787f822ecd7cdc76d5f1991584
-      prettier: 3.3.3
+      prettier: 3.7.4
 
-  prettier-plugin-sort-json@3.1.0(prettier@3.0.0):
+  prettier-plugin-tailwindcss@0.5.9(prettier@3.7.4):
     dependencies:
-      prettier: 3.0.0
-
-  prettier-plugin-sort-json@3.1.0(prettier@3.3.3):
-    dependencies:
-      prettier: 3.3.3
-
-  prettier-plugin-tailwindcss@0.5.9(prettier@3.0.0):
-    dependencies:
-      prettier: 3.0.0
-
-  prettier-plugin-tailwindcss@0.5.9(prettier@3.3.3):
-    dependencies:
-      prettier: 3.3.3
+      prettier: 3.7.4
 
   prettier@2.8.8: {}
 
-  prettier@3.0.0: {}
-
-  prettier@3.3.3: {}
+  prettier@3.7.4: {}
 
   pretty-format@29.7.0:
     dependencies:
