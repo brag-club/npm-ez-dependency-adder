@@ -124,8 +124,8 @@ importers:
         specifier: ^7.53.0
         version: 7.53.0(react@19.0.0)
       react-hot-toast:
-        specifier: ^2.4.1
-        version: 2.4.1(csstype@3.1.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: ^2.6.0
+        version: 2.6.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       tailwind-merge:
         specifier: ^3.4.0
         version: 3.4.0
@@ -2075,6 +2075,9 @@ packages:
   csstype@3.1.2:
     resolution: {integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==}
 
+  csstype@3.2.3:
+    resolution: {integrity: sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ==}
+
   damerau-levenshtein@1.0.8:
     resolution: {integrity: sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==}
 
@@ -2703,8 +2706,8 @@ packages:
     resolution: {integrity: sha512-jhIXaOzy1sb8IyocaruWSn1TjmnBVs8Ayhcy83rmxNJ8q2uWKCAj3CnJY+KpGSXCueAPc0i05kVvVKtP1t9S3g==}
     engines: {node: '>=10'}
 
-  goober@2.1.13:
-    resolution: {integrity: sha512-jFj3BQeleOoy7t93E9rZ2de+ScC4lQICLwiAQmKMg9F6roKGaLSHoCDYKkWlSafg138jejvq/mTdvmnwDQgqoQ==}
+  goober@2.1.18:
+    resolution: {integrity: sha512-2vFqsaDVIT9Gz7N6kAL++pLpp41l3PfDuusHcjnGLfR6+huZkl6ziX+zgVC3ZxpqWhzH6pyDdGrCeDhMIvwaxw==}
     peerDependencies:
       csstype: ^3.0.10
 
@@ -3221,6 +3224,7 @@ packages:
   next@14.2.5:
     resolution: {integrity: sha512-0f8aRfBVL+mpzfBjYfQuLWh2WyAwtJXCRfkPF4UJ5qd2YwrHczsrSzXU4tRMV0OAxR8ZJZWPFn6uhSC56UTsLA==}
     engines: {node: '>=18.17.0'}
+    deprecated: This version has a security vulnerability. Please upgrade to a patched version. See https://nextjs.org/blog/security-update-2025-12-11 for more details.
     hasBin: true
     peerDependencies:
       '@opentelemetry/api': ^1.1.0
@@ -3624,8 +3628,8 @@ packages:
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18 || ^19
 
-  react-hot-toast@2.4.1:
-    resolution: {integrity: sha512-j8z+cQbWIM5LY37pR6uZR6D4LfseplqnuAO4co4u8917hBUvXlEqyP1ZzqVLcqoyUesZZv/ImreoCeHVDpE5pQ==}
+  react-hot-toast@2.6.0:
+    resolution: {integrity: sha512-bH+2EBMZ4sdyou/DPrfgIouFpcRLCJ+HoCA32UoAYHn6T3Ur5yfcDCeSr5mwldl6pFOsiocmrXMuoCJ1vV8bWg==}
     engines: {node: '>=10'}
     peerDependencies:
       react: '>=16'
@@ -5934,6 +5938,8 @@ snapshots:
 
   csstype@3.1.2: {}
 
+  csstype@3.2.3: {}
+
   damerau-levenshtein@1.0.8: {}
 
   data-uri-to-buffer@2.0.2: {}
@@ -6918,9 +6924,9 @@ snapshots:
       merge2: 1.4.1
       slash: 3.0.0
 
-  goober@2.1.13(csstype@3.1.2):
+  goober@2.1.18(csstype@3.2.3):
     dependencies:
-      csstype: 3.1.2
+      csstype: 3.2.3
 
   gopd@1.2.0: {}
 
@@ -7713,13 +7719,12 @@ snapshots:
     dependencies:
       react: 19.0.0
 
-  react-hot-toast@2.4.1(csstype@3.1.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
+  react-hot-toast@2.6.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
     dependencies:
-      goober: 2.1.13(csstype@3.1.2)
+      csstype: 3.2.3
+      goober: 2.1.18(csstype@3.2.3)
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
-    transitivePeerDependencies:
-      - csstype
 
   react-is@16.13.1: {}
 
